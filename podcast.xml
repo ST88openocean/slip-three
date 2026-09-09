@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:podcast="https://podcastindex.org/namespace/1.0" version="2.0">
+  <channel>
+    <title>Slip Three</title>
+    <link>https://ST88openocean.github.io/slip-three/</link>
+    <description>A serialised audio drama and alternate reality game. Ten recordings, one voice, transmitted from open water by someone counting down to something. Every vessel, agency, callsign, coordinate and frequency in it is invented.</description>
+    <language>en</language>
+    <copyright>Slip Three. Creative Fiction / Alternate Reality Game.</copyright>
+    <lastBuildDate>Wed, 09 Sep 2026 20:18:02 +0000</lastBuildDate>
+    <generator>The Wake Engine</generator>
+    <atom:link href="https://ST88openocean.github.io/slip-three/podcast.xml" rel="self" type="application/rss+xml"/>
+    <itunes:author>Slip Three</itunes:author>
+    <itunes:summary>A serialised audio drama and alternate reality game. Ten recordings, one voice, transmitted from open water by someone counting down to something. Every vessel, agency, callsign, coordinate and frequency in it is invented.</itunes:summary>
+    <itunes:subtitle>A maritime disappearance.</itunes:subtitle>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:type>serial</itunes:type>
+    <itunes:image href="https://ST88openocean.github.io/slip-three/artwork.jpg"/>
+    <itunes:owner>
+      <itunes:name>Slip Three</itunes:name>
+      <itunes:email>slipthree@proton.me</itunes:email>
+    </itunes:owner>
+    <itunes:category text="Fiction">
+      <itunes:category text="Drama"/>
+    </itunes:category>
+    <podcast:locked owner="slipthree@proton.me">yes</podcast:locked>
+    <item>
+      <title>The Zero Node</title>
+      <description>Six seconds of window, four times a day. He spent one of them on you. Transmission one of ten.
+SLIP THREE is a work of fiction and an alternate reality game. All characters, vessels, organisations, agencies, callsigns, coordinates, dates and frequencies are invented. It is not a real disclosure, not a real distress broadcast, and no real person, company or public body is depicted or accused.</description>
+      <content:encoded>&lt;p&gt;Six seconds of window, four times a day. He spent one of them on you. Transmission one of ten.&lt;/p&gt;&lt;p&gt;&lt;em&gt;SLIP THREE is a work of fiction and an alternate reality game. All characters, vessels, organisations, agencies, callsigns, coordinates, dates and frequencies are invented. It is not a real disclosure, not a real distress broadcast, and no real person, company or public body is depicted or accused.&lt;/em&gt;&lt;/p&gt;</content:encoded>
+      <itunes:summary>Six seconds of window, four times a day. He spent one of them on you. Transmission one of ten.
+SLIP THREE is a work of fiction and an alternate reality game. All characters, vessels, organisations, agencies, callsigns, coordinates, dates and frequencies are invented. It is not a real disclosure, not a real distress broadcast, and no real person, company or public body is depicted or accused.</itunes:summary>
+      <pubDate>Tue, 15 Sep 2026 03:00:00 +0000</pubDate>
+      <guid isPermaLink="false">the-wake-01</guid>
+      <link>https://ST88openocean.github.io/slip-three/#ep01</link>
+      <enclosure url="https://ST88openocean.github.io/slip-three/episodes/slip-three-01.mp3" length="5345847" type="audio/mpeg"/>
+      <itunes:duration>00:05:34</itunes:duration>
+      <itunes:episode>1</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Slip Three</itunes:author>
+    </item>
+  </channel>
+</rss>
