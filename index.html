@@ -122,6 +122,11 @@ footer strong{color:var(--muted);display:block;margin-bottom:8px;font-family:var
   <div id="eps"></div>
 </section>
 
+<section class="card" aria-labelledby="log-h" id="log">
+  <h2 id="log-h">The log</h2>
+  <div id="files"></div>
+</section>
+
 <section class="card" aria-labelledby="sub-h">
   <h2 id="sub-h">Follow the signal</h2>
   <div class="row">
@@ -158,7 +163,7 @@ footer strong{color:var(--muted);display:block;margin-bottom:8px;font-family:var
 
 </div>
 <script>
-const DATA = {"episodes": [{"episode": "01", "title": "The Zero Node", "notes": "Six seconds of window, four times a day. He spent one of them on you. Transmission one of ten.", "duration": "5:34", "date": "15 SEP 2026", "url": "episodes/slip-three-01.mp3"}], "next_drop": "2026-09-15T03:00:00Z", "feed_url": "https://ST88openocean.github.io/slip-three/podcast.xml", "theory_endpoint": "", "contact": "slipthree@proton.me"};
+const DATA = {"episodes": [{"episode": "01", "title": "The Zero Node", "notes": "Six seconds of window, four times a day. He spent one of them on you. Transmission one of ten.", "duration": "5:22", "date": "15 SEP 2026", "url": "episodes/slip-three-01.mp3"}], "next_drop": "2026-09-15T03:00:00Z", "feed_url": "https://ST88openocean.github.io/slip-three/podcast.xml", "artifacts": [{"file": "MCA-CTL-0314-RAW.slice", "label": "MCA-CTL-0314-RAW", "note": "Coastal telemetry ingest package, station CQ-03. Full capture is 14.2 GB. The window I could get through in six seconds is below. Everything either side of it is tide.", "bytes": 18874348, "sha256": "ffb3a1ac5428caad0b1eb5f48ef7ca2f13de9a231d57917139acc5ab0055805f"}], "theory_endpoint": "", "contact": "slipthree@proton.me"};
 
 /* ---------- countdown ---------- */
 (function(){
@@ -232,6 +237,31 @@ const DATA = {"episodes": [{"episode": "01", "title": "The Zero Node", "notes": 
       const r = bar.getBoundingClientRect();
       if (audio.duration) audio.currentTime = (e.clientX - r.left) / r.width * audio.duration;
     });
+    host.appendChild(el);
+  });
+})();
+
+/* ---------- the log ---------- */
+(function(){
+  const host = document.getElementById('files');
+  if (!DATA.artifacts || !DATA.artifacts.length) {
+    host.innerHTML = '<p class="empty">NOTHING RECOVERED YET</p>'; return;
+  }
+  const esc = s => String(s).replace(/[&<>"']/g, c =>
+    ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const mb = b => (b/1048576).toFixed(1) + ' MB';
+  DATA.artifacts.forEach(a => {
+    const el = document.createElement('article');
+    el.className = 'ep';
+    el.innerHTML =
+      '<div class="ep-top"><span class="ep-no">FILE</span>' +
+      '<h3 class="ep-title">' + esc(a.label) + '</h3>' +
+      '<span class="ep-meta">' + mb(a.bytes) + '</span></div>' +
+      '<p class="ep-notes">' + esc(a.note) + '</p>' +
+      '<p class="ep-notes" style="font-family:var(--mono);font-size:11px;' +
+      'color:var(--dim);word-break:break-all">sha256 ' + esc(a.sha256) + '</p>' +
+      '<div class="row" style="margin-top:14px">' +
+      '<a class="btn" href="' + esc(a.file) + '" download>Download</a></div>';
     host.appendChild(el);
   });
 })();
