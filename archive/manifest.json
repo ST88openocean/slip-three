@@ -3,7 +3,7 @@
     "title": "Slip Three",
     "form": "serialised audio fiction with an accompanying puzzle",
     "transmissions_planned": 10,
-    "transmissions_published": 2,
+    "transmissions_published": 3,
     "schedule": "weekly, Tuesdays 03:00 UTC",
     "site": "https://ST88openocean.github.io/slip-three/",
     "feed": "https://ST88openocean.github.io/slip-three/podcast.xml",
@@ -31,11 +31,27 @@
       "role": "Transmission audio"
     },
     {
+      "path": "episodes/slip-three-03.mp3",
+      "url": "https://ST88openocean.github.io/slip-three/episodes/slip-three-03.mp3",
+      "bytes": 5239370,
+      "size": "5.0 MB",
+      "sha256": "5bbaec520bc14b6d96d885ed0c2429580f211d33a737cfcfa32128ba82cd5647",
+      "role": "Transmission audio"
+    },
+    {
       "path": "MCA-CTL-0314-RAW.slice",
       "url": "https://ST88openocean.github.io/slip-three/MCA-CTL-0314-RAW.slice",
       "bytes": 18874348,
       "size": "18.0 MB",
       "sha256": "ffb3a1ac5428caad0b1eb5f48ef7ca2f13de9a231d57917139acc5ab0055805f",
+      "role": "Coastal telemetry capture, station CQ-03"
+    },
+    {
+      "path": "MCA-CTL-0315-TIDE.slice",
+      "url": "https://ST88openocean.github.io/slip-three/MCA-CTL-0315-TIDE.slice",
+      "bytes": 47168,
+      "size": "46.1 KB",
+      "sha256": "e740e1e48e6446714cf396c7042e1ab4c1e5af6e21955028ae50801f34a50f52",
       "role": "Coastal telemetry capture, station CQ-03"
     },
     {
@@ -60,6 +76,14 @@
       "bytes": 128470,
       "size": "125.5 KB",
       "sha256": "43222b91f18b5d5efd3fb455279e1e32d3b455d68294c997ae2a854c9e8dd01d",
+      "role": "Episode plate"
+    },
+    {
+      "path": "episodes/art/slip-three-03.jpg",
+      "url": "https://ST88openocean.github.io/slip-three/episodes/art/slip-three-03.jpg",
+      "bytes": 141361,
+      "size": "138.0 KB",
+      "sha256": "671232b0f2f8d47d1cb897bae60ae99cbc54d305f38026b094777f81e8ab16da",
       "role": "Episode plate"
     }
   ]
