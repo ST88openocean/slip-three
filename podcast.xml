@@ -7,7 +7,7 @@
 New transmission every Tuesday, 03:00 UTC.</description>
     <language>en</language>
     <copyright>Slip Three.</copyright>
-    <lastBuildDate>Thu, 10 Sep 2026 02:08:11 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 04:11:06 +0000</lastBuildDate>
     <generator>The Wake Engine</generator>
     <atom:link href="https://ST88openocean.github.io/slip-three/podcast.xml" rel="self" type="application/rss+xml"/>
     <itunes:author>Slip Three</itunes:author>
@@ -42,7 +42,7 @@ Read from 0x4E1C20. Everything either side of it is tide.</itunes:summary>
       <pubDate>Tue, 15 Sep 2026 03:00:00 +0000</pubDate>
       <guid isPermaLink="false">slip-three-01</guid>
       <link>https://ST88openocean.github.io/slip-three/#ep01</link>
-      <enclosure url="https://ST88openocean.github.io/slip-three/episodes/slip-three-01.mp3" length="5152557" type="audio/mpeg"/>
+      <enclosure url="https://ST88openocean.github.io/slip-three/episodes/slip-three-01.mp3" length="5152027" type="audio/mpeg"/>
       <itunes:duration>00:05:22</itunes:duration>
       <itunes:episode>1</itunes:episode>
       <itunes:episodeType>full</itunes:episodeType>
