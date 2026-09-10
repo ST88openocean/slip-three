@@ -3,7 +3,7 @@
     "title": "Slip Three",
     "form": "serialised audio fiction with an accompanying puzzle",
     "transmissions_planned": 10,
-    "transmissions_published": 1,
+    "transmissions_published": 2,
     "schedule": "weekly, Tuesdays 03:00 UTC",
     "site": "https://ST88openocean.github.io/slip-three/",
     "feed": "https://ST88openocean.github.io/slip-three/podcast.xml",
@@ -20,6 +20,14 @@
       "bytes": 5145913,
       "size": "4.9 MB",
       "sha256": "34f4463a44819ec89c0158851cb71149057ab7eedcda5b266747af0ded0353d8",
+      "role": "Transmission audio"
+    },
+    {
+      "path": "episodes/slip-three-02.mp3",
+      "url": "https://ST88openocean.github.io/slip-three/episodes/slip-three-02.mp3",
+      "bytes": 6716239,
+      "size": "6.4 MB",
+      "sha256": "ef7aeed919e38847bfea393e5349f29bb4041625b5f26c643ae00bfa1dc0a5e1",
       "role": "Transmission audio"
     },
     {
