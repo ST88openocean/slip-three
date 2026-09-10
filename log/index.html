@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>STATION RECORD // LOCKED</title>
+<meta name="robots" content="noindex,nofollow">
+<style>
+:root{--bg:#070b10;--panel:#0d141c;--line:#1d2836;--ink:#e9f0f5;--muted:#8fa1b3;
+--dim:#63748a;--accent:#39FF14;--mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--mono);
+font-size:14px;line-height:1.6;-webkit-text-size-adjust:100%}
+.wrap{max-width:860px;margin:0 auto;padding:48px 20px 80px}
+a{color:var(--accent)}
+.back{display:inline-block;color:var(--dim);text-decoration:none;letter-spacing:.18em;
+font-size:11px;margin-bottom:28px}
+.back:hover{color:var(--accent)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:24px}
+h1{font-size:13px;letter-spacing:.24em;color:var(--muted);margin:0 0 6px;font-weight:600}
+.sub{font-size:11px;letter-spacing:.18em;color:var(--dim);margin:0 0 24px}
+label{display:block;font-size:11px;letter-spacing:.18em;color:var(--muted);margin-bottom:8px}
+input{width:100%;background:#070c12;border:1px solid var(--line);border-radius:7px;
+color:var(--ink);font-family:var(--mono);font-size:15px;letter-spacing:.16em;
+padding:13px 14px;text-transform:uppercase}
+input:focus{outline:none;border-color:var(--accent)}
+button{margin-top:14px;background:var(--accent);color:#04140a;border:0;border-radius:7px;
+font-family:var(--mono);font-size:12px;letter-spacing:.2em;font-weight:700;
+padding:13px 22px;cursor:pointer}
+button[disabled]{opacity:.55;cursor:progress}
+.msg{min-height:20px;margin-top:14px;font-size:12px;letter-spacing:.1em;color:var(--dim)}
+.msg.bad{color:#ff6b6b}
+.hint{color:var(--dim);font-size:12px;margin-top:20px;border-top:1px solid var(--line);padding-top:16px}
+/* the record, once it opens */
+#out{display:none}
+.doc{background:#e8e6df;color:#1a1a1a;border-radius:8px;padding:28px 26px;overflow-x:auto}
+.doc h2{font-size:15px;letter-spacing:.12em;margin:0 0 4px}
+.doc .ds{font-size:11px;letter-spacing:.1em;color:#6f6f6a;margin:0 0 22px}
+.doc h3{font-size:11px;letter-spacing:.18em;color:#6f6f6a;margin:26px 0 10px;font-weight:600}
+.doc h3:first-of-type{margin-top:0}
+table{border-collapse:collapse;width:100%;font-size:12.5px;min-width:520px}
+th{text-align:left;font-weight:600;color:#6f6f6a;letter-spacing:.1em;font-size:10.5px;
+padding:0 14px 7px 0;border-bottom:1px solid #b0aea6;white-space:nowrap}
+td{padding:8px 14px 8px 0;border-bottom:1px solid #d6d4cc;white-space:nowrap}
+tr.gap td{background:#f3f1ea}
+.bar{display:inline-block;background:#111;height:12px;width:118px;vertical-align:-1px;
+border-radius:1px}
+.hand{margin-top:24px;padding-top:16px;border-top:1px solid #b0aea6;color:#3a3a38;
+font-size:12.5px;line-height:1.75;white-space:pre-line}
+@media (max-width:520px){.wrap{padding:32px 14px 60px}.doc{padding:20px 16px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="../">&larr; BACK TO THE SIGNAL</a>
+
+<section class="card" id="gate">
+  <h1>STATION RECORD // LOCKED</h1>
+  <p class="sub">OPENED BY Transmission 01</p>
+  <form id="f" novalidate>
+    <label for="k">PASSPHRASE</label>
+    <input id="k" name="k" autocomplete="off" autocapitalize="characters"
+           spellcheck="false" placeholder="&mdash;&mdash;&mdash;&mdash;&mdash;">
+    <button id="go" type="submit">OPEN</button>
+    <p class="msg" id="m" role="status" aria-live="polite"></p>
+  </form>
+  <p class="hint">The tail of the first transmission is not noise.</p>
+</section>
+
+<section id="out"><div class="doc" id="doc"></div></section>
+</div>
+
+<script>
+const ENV = {"v": 1, "kdf": "PBKDF2-SHA256", "iter": 310000, "salt": "CHJbM4oUJAk9IDrCjw9gGg==", "nonce": "XMacERVviaozCXuL", "ct": "qa8NWH8Q7i2jE8oCkmGH7wIGQ9aafNUhWLecrFpE8iW/ybr6sJZ0xIi/JDHH2cAteaaGxduAuZCp2+UJxx7hlbO0s2DVeBbIcncEJHeg16t2S1ZIOb3LqsTg4JwXlREU3m2VIcbp2gqnmDYZHDFnt202XV1Q7yamU7R1oYLz4oTY1iP5mMQZF/49JM8Dcs3GQIWjIoGDbjOZ8EUSxxLLZi1ELmp0WfO7ik8wEEV/gCOEANn5hpHYahidCuok0IPv0XS3hiXv2QjOGk8dVdRwEF31WCA04+d+qJlLy7a/O6bv+lgYdm+CA7I1TUve1WcZqRREoWy6Avm8KJ7+XyI5f+hgaAgf7xh+rIOSByVB/bcTJqHggGXezAb2ybvLNsD7JcSbovAa+CMVH+H/VQ+Yb5rI9HvISLKVoZZNzTHBRc4FtVYnQXXwX+shJ7seeQeSmgePU0xY1O1H1jST5wrei5JxJSH2/xXRKUnp6sGitBKQnyNfiuSKxNr951lVihjhK25rnNjPIeAezOnFD82m94loXiniL0qvuCoOpPuivFDY6gYHla23/x1WIvZTYjw+ee3Zy8XFTxfH+8NE7prBFXiMLSl80fK8bZOM1XU1iSOnbUJhBC+sU4vVO1ZZmzMIyP7Ev5nuBXI3PE9k+RJE+FiiXegiKmwJTHjFF23d51N5u1Ewv7eKyXt6cW+1bqpYI+Uh0PL6NYKPWD4ejqxIYyX1G0+W/dkBXs9f5sqSUbmTVpVuMwHDu+U6d42vH004qmoXed8QsPW+uAM9nWp/pErox3vetaQl/TfBkXNNWZW2GqJPn5osrFFwdrS6Jm7fqeNUHvFJR0l/+ugzfa2hh8q4gJyCglM0bf7HlDmMQKG3GfMYO3r/Tv2lkMbzefMS2LydYRZJfld/YUCQAVKxQWlYnEKMgchQ64k7KXQt6qhppV95IBlDju9EjUc325N0O0fD+WvY+7wVbVwvh0mM87oPAMPxz7CY4LpoMJKU1A5cb2KCUYBPeA6nh7aKeOF6wq72SbERGj/mKZL6jL6OC8qT9gMtL9fu8xecWDD9RUtDN5C095uE8gydNTVAsjZBQNrugbC23j0QnDFcaVOnmiobuJPJBzNcjhsgK/QwJo7ToJ0PBZHj6CtWTOOnaWR5w/K+s8E5940XMQD5ouzXVqDxBAfKKGyfNEjpY4yzQWz1hCFRuh/XBPkCTDwhmR3tCezqSMTia7fWkwmzimXFVw3jRrPZi5E81pASkzx0zCMD1JR/qaPR4ZmxKlc0ONfwtd0cgcqwiahggB84IVB2JcXMoZ23waD5QM6OtFkGhRIIyRcuA/xQ49QhCscYnUpeLHvtCLPO6fgC1GyN1IqTaRvb6UwtbXEz/bt9rps2CPA7ifjyNmSw4F9m5XNboexW"};
+
+const b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+const norm = s => s.normalize('NFKC').split(/\s+/).join('').toUpperCase();
+
+async function unseal(pass, env){
+  const enc = new TextEncoder();
+  const base = await crypto.subtle.importKey(
+    'raw', enc.encode(norm(pass)), 'PBKDF2', false, ['deriveKey']);
+  const key = await crypto.subtle.deriveKey(
+    {name:'PBKDF2', salt:b64(env.salt), iterations:env.iter, hash:'SHA-256'},
+    base, {name:'AES-GCM', length:256}, false, ['decrypt']);
+  const pt = await crypto.subtle.decrypt(
+    {name:'AES-GCM', iv:b64(env.nonce)}, key, b64(env.ct));
+  return new TextDecoder().decode(pt);
+}
+
+
+const esc = s => String(s).replace(/[&<>"']/g, c =>
+  ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+// A null cell is a redaction, not an empty one. Drawing it as a bar rather
+// than leaving the cell blank is the whole point of the document: somebody
+// took a name out, and the shape of what they took is still there.
+const cell = v => v === null ? '<span class="bar" aria-label="redacted"></span>' : esc(v);
+
+function render(d){
+  let h = '<h2>' + esc(d.title) + '</h2><p class="ds">' + esc(d.subtitle) + '</p>';
+  for (const sec of d.tables){
+    h += '<h3>' + esc(sec.heading) + '</h3><table><thead><tr>' +
+         sec.table.columns.map(c => '<th>' + esc(c) + '</th>').join('') +
+         '</tr></thead><tbody>' +
+         sec.table.rows.map(r => '<tr' + (r.includes(null) ? ' class="gap"' : '') + '>' +
+           r.map(v => '<td>' + cell(v) + '</td>').join('') + '</tr>').join('') +
+         '</tbody></table>';
+  }
+  if (d.note) h += '<div class="hand">' + d.note.map(esc).join('\n') + '</div>';
+  return h;
+}
+
+const f = document.getElementById('f'), k = document.getElementById('k'),
+      m = document.getElementById('m'), go = document.getElementById('go');
+
+f.addEventListener('submit', async e => {
+  e.preventDefault();
+  const pass = k.value.trim();
+  if (!pass) return;
+  go.disabled = true; m.className = 'msg'; m.textContent = 'CHECKING…';
+  try {
+    // PBKDF2 at this iteration count takes a beat on a phone. Yielding first
+    // lets the browser paint CHECKING, so the wait reads as the door working
+    // rather than the page having died.
+    await new Promise(r => setTimeout(r, 60));
+    const data = JSON.parse(await unseal(pass, ENV));
+    document.getElementById('doc').innerHTML = render(data);
+    document.getElementById('gate').style.display = 'none';
+    document.getElementById('out').style.display = 'block';
+    document.title = data.title;
+    try { history.replaceState(null, '', '#open'); } catch (_) {}
+  } catch (err) {
+    m.className = 'msg bad';
+    m.textContent = 'NO MATCH. THE DOOR DOES NOT ARGUE.';
+    go.disabled = false;
+    k.select();
+  }
+});
+</script>
+</body>
+</html>
