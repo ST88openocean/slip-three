@@ -1,0 +1,58 @@
+{
+  "work": {
+    "title": "Slip Three",
+    "form": "serialised audio fiction with an accompanying puzzle",
+    "transmissions_planned": 10,
+    "transmissions_published": 1,
+    "schedule": "weekly, Tuesdays 03:00 UTC",
+    "site": "https://ST88openocean.github.io/slip-three/",
+    "feed": "https://ST88openocean.github.io/slip-three/podcast.xml",
+    "contact": "slipthree@proton.me"
+  },
+  "verification": {
+    "algorithm": "SHA-256",
+    "note": "Every published artefact is listed with its digest. A copy with a matching digest is the same file regardless of where it came from. Mirroring is encouraged."
+  },
+  "files": [
+    {
+      "path": "episodes/slip-three-01.mp3",
+      "url": "https://ST88openocean.github.io/slip-three/episodes/slip-three-01.mp3",
+      "bytes": 5152027,
+      "size": "4.9 MB",
+      "sha256": "69d01a95febf65f0a4147eea03b19519f2a644414cb1af676bd3fe7509e8b818",
+      "role": "Transmission audio"
+    },
+    {
+      "path": "MCA-CTL-0314-RAW.slice",
+      "url": "https://ST88openocean.github.io/slip-three/MCA-CTL-0314-RAW.slice",
+      "bytes": 18874348,
+      "size": "18.0 MB",
+      "sha256": "ffb3a1ac5428caad0b1eb5f48ef7ca2f13de9a231d57917139acc5ab0055805f",
+      "role": "Coastal telemetry capture, station CQ-03"
+    },
+    {
+      "path": "artwork-document-version.jpg",
+      "url": "https://ST88openocean.github.io/slip-three/artwork-document-version.jpg",
+      "bytes": 356140,
+      "size": "347.8 KB",
+      "sha256": "dde834d69f10333173fcf2c50cd4945dfd88dfdf9cc8caf5b36bd4416bc9f8dd",
+      "role": "Incident summary sheet"
+    },
+    {
+      "path": "episodes/art/slip-three-01.jpg",
+      "url": "https://ST88openocean.github.io/slip-three/episodes/art/slip-three-01.jpg",
+      "bytes": 240476,
+      "size": "234.8 KB",
+      "sha256": "a1860ee1f75e302e10978ee2a15c2e1603c4ac334b7aaeac645dc90177876696",
+      "role": "Episode plate"
+    },
+    {
+      "path": "episodes/art/slip-three-02.jpg",
+      "url": "https://ST88openocean.github.io/slip-three/episodes/art/slip-three-02.jpg",
+      "bytes": 128470,
+      "size": "125.5 KB",
+      "sha256": "43222b91f18b5d5efd3fb455279e1e32d3b455d68294c997ae2a854c9e8dd01d",
+      "role": "Episode plate"
+    }
+  ]
+}
