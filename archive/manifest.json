@@ -3,7 +3,7 @@
     "title": "Slip Three",
     "form": "serialised audio fiction with an accompanying puzzle",
     "transmissions_planned": 10,
-    "transmissions_published": 3,
+    "transmissions_published": 4,
     "schedule": "weekly, Tuesdays 03:00 UTC",
     "site": "https://ST88openocean.github.io/slip-three/",
     "feed": "https://ST88openocean.github.io/slip-three/podcast.xml",
@@ -37,6 +37,22 @@
       "size": "5.0 MB",
       "sha256": "5bbaec520bc14b6d96d885ed0c2429580f211d33a737cfcfa32128ba82cd5647",
       "role": "Transmission audio"
+    },
+    {
+      "path": "episodes/slip-three-04.mp3",
+      "url": "https://ST88openocean.github.io/slip-three/episodes/slip-three-04.mp3",
+      "bytes": 8852479,
+      "size": "8.4 MB",
+      "sha256": "03afb7f3ef532158e2a8c3fb1efb7363cc2a56f88c3534585aecff9177633883",
+      "role": "Transmission audio"
+    },
+    {
+      "path": "IMG_0416.jpg",
+      "url": "https://ST88openocean.github.io/slip-three/IMG_0416.jpg",
+      "bytes": 127156,
+      "size": "124.2 KB",
+      "sha256": "384c9ad73f7ba71642bcfca3f9c2990e6ba97cc978f3d13aeb3e2a2a29e470d8",
+      "role": "File"
     },
     {
       "path": "MCA-CTL-0314-RAW.slice",
@@ -84,6 +100,14 @@
       "bytes": 141361,
       "size": "138.0 KB",
       "sha256": "671232b0f2f8d47d1cb897bae60ae99cbc54d305f38026b094777f81e8ab16da",
+      "role": "Episode plate"
+    },
+    {
+      "path": "episodes/art/slip-three-04.jpg",
+      "url": "https://ST88openocean.github.io/slip-three/episodes/art/slip-three-04.jpg",
+      "bytes": 119589,
+      "size": "116.8 KB",
+      "sha256": "f9f603da740286766a6d25ccea2d81e1cf2b945f159e8da5a187de608a84bc44",
       "role": "Episode plate"
     }
   ]
