@@ -3,16 +3,40 @@
   <channel>
     <title>Slip Three</title>
     <link>https://ST88openocean.github.io/slip-three/</link>
-    <description>Ten transmissions. One voice, broadcasting from open water on a six-second satellite window, counting down to something.
-New transmission every Tuesday, 03:00 UTC.</description>
+    <description>Ten recordings. One a week. If they stop arriving, they didn't stop because I got bored.
+
+Eight years ago I was at CQ-03 the night the Kestrel Bank node went down. Four people died. The authorisation chain for that night has a hole in it where an operator identifier should be — somebody signed off on the isolate and then took their own name back out of it. I kept the raw capture. I have been moving ever since.
+
+I had an arrangement with a solicitor: if I went quiet for a month, he released the lot. In March he stopped answering his phone. I have stopped assuming that was a coincidence.
+
+So this is the new arrangement, and you are it. Tuesdays, 03:00 UTC. I get six seconds of uplink four times a day and one of them goes to this. Everything I can prove goes out attached to it. Copy it. Mirror it. Put it somewhere that isn't me. A thing that only exists in one place can be made not to exist.
+
+Don't take my word for any of it — the capture is attached to the first transmission. Read it yourself.
+
+Everything released so far: st88openocean.github.io/slip-three
+The only channel I answer: slipthree@proton.me. I answer slowly.
+
+I'm not going to tell you where I am. I repaint the hull most years and I'd like to keep that working.</description>
     <language>en</language>
     <copyright>Slip Three.</copyright>
     <lastBuildDate>Thu, 10 Sep 2026 04:11:06 +0000</lastBuildDate>
     <generator>The Wake Engine</generator>
     <atom:link href="https://ST88openocean.github.io/slip-three/podcast.xml" rel="self" type="application/rss+xml"/>
     <itunes:author>Slip Three</itunes:author>
-    <itunes:summary>Ten transmissions. One voice, broadcasting from open water on a six-second satellite window, counting down to something.
-New transmission every Tuesday, 03:00 UTC.</itunes:summary>
+    <itunes:summary>Ten recordings. One a week. If they stop arriving, they didn't stop because I got bored.
+
+Eight years ago I was at CQ-03 the night the Kestrel Bank node went down. Four people died. The authorisation chain for that night has a hole in it where an operator identifier should be — somebody signed off on the isolate and then took their own name back out of it. I kept the raw capture. I have been moving ever since.
+
+I had an arrangement with a solicitor: if I went quiet for a month, he released the lot. In March he stopped answering his phone. I have stopped assuming that was a coincidence.
+
+So this is the new arrangement, and you are it. Tuesdays, 03:00 UTC. I get six seconds of uplink four times a day and one of them goes to this. Everything I can prove goes out attached to it. Copy it. Mirror it. Put it somewhere that isn't me. A thing that only exists in one place can be made not to exist.
+
+Don't take my word for any of it — the capture is attached to the first transmission. Read it yourself.
+
+Everything released so far: st88openocean.github.io/slip-three
+The only channel I answer: slipthree@proton.me. I answer slowly.
+
+I'm not going to tell you where I am. I repaint the hull most years and I'd like to keep that working.</itunes:summary>
     <itunes:subtitle>A maritime disappearance.</itunes:subtitle>
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
@@ -27,18 +51,39 @@ New transmission every Tuesday, 03:00 UTC.</itunes:summary>
     <podcast:locked owner="slipthree@proton.me">yes</podcast:locked>
     <item>
       <title>The Zero Node</title>
-      <description>Six seconds of window, four times a day. He spent one of them on you.
-Transmission 01 of 10.
-Attached: MCA-CTL-0314-RAW (partial). Station CQ-03.
-Read from 0x4E1C20. Everything either side of it is tide.</description>
-      <content:encoded>&lt;p&gt;Six seconds of window, four times a day. He spent one of them on you.
-Transmission 01 of 10.
-Attached: MCA-CTL-0314-RAW (partial). Station CQ-03.
-Read from 0x4E1C20. Everything either side of it is tide.&lt;/p&gt;</content:encoded>
-      <itunes:summary>Six seconds of window, four times a day. He spent one of them on you.
-Transmission 01 of 10.
-Attached: MCA-CTL-0314-RAW (partial). Station CQ-03.
-Read from 0x4E1C20. Everything either side of it is tide.</itunes:summary>
+      <description>Transmission 01 of 10.
+
+Six seconds of uplink, four times a day. This is one of them.
+
+Attached: MCA-CTL-0314-RAW, partial. Tide, salinity, wind, air — station CQ-03, the day either side of the collapse. It is the raw capture and not somebody's summary of it, so most of it is boring. That is the point. Read from 0x4E1C20. Everything either side of it is tide.
+
+One of those records was written by nobody. What sits under it is the whole reason I am doing this.
+
+The file: st88openocean.github.io/slip-three/MCA-CTL-0314-RAW.slice
+
+If you get somewhere with it: slipthree@proton.me. Use an address you don't mind burning.</description>
+      <content:encoded>&lt;p&gt;Transmission 01 of 10.
+
+Six seconds of uplink, four times a day. This is one of them.
+
+Attached: MCA-CTL-0314-RAW, partial. Tide, salinity, wind, air — station CQ-03, the day either side of the collapse. It is the raw capture and not somebody's summary of it, so most of it is boring. That is the point. Read from 0x4E1C20. Everything either side of it is tide.
+
+One of those records was written by nobody. What sits under it is the whole reason I am doing this.
+
+The file: st88openocean.github.io/slip-three/MCA-CTL-0314-RAW.slice
+
+If you get somewhere with it: slipthree@proton.me. Use an address you don't mind burning.&lt;/p&gt;</content:encoded>
+      <itunes:summary>Transmission 01 of 10.
+
+Six seconds of uplink, four times a day. This is one of them.
+
+Attached: MCA-CTL-0314-RAW, partial. Tide, salinity, wind, air — station CQ-03, the day either side of the collapse. It is the raw capture and not somebody's summary of it, so most of it is boring. That is the point. Read from 0x4E1C20. Everything either side of it is tide.
+
+One of those records was written by nobody. What sits under it is the whole reason I am doing this.
+
+The file: st88openocean.github.io/slip-three/MCA-CTL-0314-RAW.slice
+
+If you get somewhere with it: slipthree@proton.me. Use an address you don't mind burning.</itunes:summary>
       <pubDate>Tue, 15 Sep 2026 03:00:00 +0000</pubDate>
       <guid isPermaLink="false">slip-three-01</guid>
       <link>https://ST88openocean.github.io/slip-three/#ep01</link>
