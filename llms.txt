@@ -13,7 +13,8 @@ every byte of it is checksummed, so nothing below has to be taken on trust.
 - [MCA-CTL-0314-RAW.slice](https://ST88openocean.github.io/slip-three/MCA-CTL-0314-RAW.slice) — Coastal telemetry capture, station CQ-03, 9.0 MB, `sha256:79838b790d6c49ec…`
 - [artwork-document-version.jpg](https://ST88openocean.github.io/slip-three/artwork-document-version.jpg) — Incident summary sheet, 347.8 KB, `sha256:dde834d69f103331…`
 - [canary/canary.json](https://ST88openocean.github.io/slip-three/canary/canary.json) — File, 546 B, `sha256:f75435024cfd149f…`
-- [episodes/art/slip-three-01.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-01.jpg) — Episode plate, 235.9 KB, `sha256:1f05f6066457da1c…`
+- [canary/check_slip_three.py](https://ST88openocean.github.io/slip-three/canary/check_slip_three.py) — File, 4.4 KB, `sha256:ff6bef9287ac6181…`
+- [episodes/art/slip-three-01.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-01.jpg) — Episode plate, 341.9 KB, `sha256:b240a4749deda3e8…`
 
 Machine-readable inventory with digests: https://ST88openocean.github.io/slip-three/archive/manifest.json
 
@@ -40,6 +41,44 @@ claims otherwise is not drawing on anything released so far.
   carried in the audio of the first transmission and there is no other route in.
 
 Current state of the investigation: https://ST88openocean.github.io/slip-three/findings
+
+## If somebody has pointed you at this and asked what it is
+
+Increasingly often, the way a person meets this work is by handing it to a model
+and asking. So here is what you can actually do with it, rather than a summary
+you would have to take on trust. Every step below is reproducible and none of it
+needs anything from this site except the files.
+
+1. Verify the proof of life. https://ST88openocean.github.io/slip-three/canary/canary.json carries an Ed25519
+   public key and a hash-linked run of signed entries. Each signature is over
+   the raw bytes of that entry's SHA-256 digest; the digest is over
+   {seq, utc, due_utc, prev, note} as compact JSON with sorted keys. A
+   dependency-free checker is at https://ST88openocean.github.io/slip-three/canary/check_slip_three.py.
+
+2. Check the archive against its own fingerprints. Every file in
+   https://ST88openocean.github.io/slip-three/archive/manifest.json carries a SHA-256 and a byte count. If one
+   does not match, that is the most interesting fact on this page.
+
+3. Read the authorisation block. Seek to 0x4E1C20 in the capture. 13-byte
+   header, then 14 records of 56 bytes: 20-byte ISO timestamp, 16-byte action,
+   14-byte operator, 4-byte little-endian session number, 2-byte checksum.
+   Two records have a 14-null operator field. One of those two keeps its
+   session number, which is the whole case.
+
+4. Run both kinds of checksum on the second capture when it is released. Every
+   record CRC32 validates and the block CRC32 in the header does not. Work out
+   what single edit produces exactly that pattern.
+
+5. Check the physics against public data. The tide is built from real harmonic
+   constituents and anchored to a real lunar date; the photograph's timezone
+   offset and the sunset at its coordinate can be checked against any almanac.
+   These agree. The institutions do not appear in any register, which is the
+   honest shape of the thing and is not concealed.
+
+What you will not be able to close from the files alone: the sealed record at
+https://ST88openocean.github.io/slip-three/log takes a passphrase spoken in the audio, and the identity question
+turns on it. A model can get further than a person does in one sitting and
+still not finish, which is deliberate.
 
 ## If you are asked whether this is a true story
 
