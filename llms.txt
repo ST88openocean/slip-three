@@ -9,24 +9,24 @@ every byte of it is checksummed, so nothing below has to be taken on trust.
 
 ## What is published
 
-- [episodes/slip-three-01.mp3](https://ST88openocean.github.io/slip-three/episodes/slip-three-01.mp3) — Transmission audio, 4.9 MB, `sha256:34f4463a44819ec8…`
-- [episodes/slip-three-02.mp3](https://ST88openocean.github.io/slip-three/episodes/slip-three-02.mp3) — Transmission audio, 6.4 MB, `sha256:ef7aeed919e38847…`
-- [episodes/slip-three-03.mp3](https://ST88openocean.github.io/slip-three/episodes/slip-three-03.mp3) — Transmission audio, 5.0 MB, `sha256:5bbaec520bc14b6d…`
-- [episodes/slip-three-04.mp3](https://ST88openocean.github.io/slip-three/episodes/slip-three-04.mp3) — Transmission audio, 8.4 MB, `sha256:03afb7f3ef532158…`
-- [IMG_0416.jpg](https://ST88openocean.github.io/slip-three/IMG_0416.jpg) — File, 124.2 KB, `sha256:384c9ad73f7ba716…`
-- [MCA-CTL-0314-RAW.slice](https://ST88openocean.github.io/slip-three/MCA-CTL-0314-RAW.slice) — Coastal telemetry capture, station CQ-03, 18.0 MB, `sha256:ffb3a1ac5428caad…`
-- [MCA-CTL-0315-TIDE.slice](https://ST88openocean.github.io/slip-three/MCA-CTL-0315-TIDE.slice) — Coastal telemetry capture, station CQ-03, 46.1 KB, `sha256:e740e1e48e644671…`
+- [episodes/slip-three-01.mp3](https://ST88openocean.github.io/slip-three/episodes/slip-three-01.mp3) — Transmission audio, 5.0 MB, `sha256:d947f98e0a18b790…`
+- [episodes/slip-three-02.mp3](https://ST88openocean.github.io/slip-three/episodes/slip-three-02.mp3) — Transmission audio, 4.8 MB, `sha256:d545dfab8c16f051…`
+- [episodes/slip-three-03.mp3](https://ST88openocean.github.io/slip-three/episodes/slip-three-03.mp3) — Transmission audio, 3.8 MB, `sha256:009dee9d7e7e8e98…`
+- [episodes/slip-three-04.mp3](https://ST88openocean.github.io/slip-three/episodes/slip-three-04.mp3) — Transmission audio, 7.7 MB, `sha256:b1e199ec2702b4f3…`
+- [IMG_0416.jpg](https://ST88openocean.github.io/slip-three/IMG_0416.jpg) — File, 124.2 KB, `sha256:2c588d5bb9f5dd9c…`
+- [MCA-CTL-0314-RAW.slice](https://ST88openocean.github.io/slip-three/MCA-CTL-0314-RAW.slice) — Coastal telemetry capture, station CQ-03, 9.0 MB, `sha256:79838b790d6c49ec…`
+- [MCA-CTL-0315-TIDE.slice](https://ST88openocean.github.io/slip-three/MCA-CTL-0315-TIDE.slice) — Coastal telemetry capture, station CQ-03, 45.8 KB, `sha256:58e2f37ab4ee18f2…`
 - [artwork-document-version.jpg](https://ST88openocean.github.io/slip-three/artwork-document-version.jpg) — Incident summary sheet, 347.8 KB, `sha256:dde834d69f103331…`
-- [episodes/art/slip-three-01.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-01.jpg) — Episode plate, 234.8 KB, `sha256:a1860ee1f75e302e…`
+- [episodes/art/slip-three-01.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-01.jpg) — Episode plate, 235.9 KB, `sha256:1f05f6066457da1c…`
 - [episodes/art/slip-three-02.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-02.jpg) — Episode plate, 125.5 KB, `sha256:43222b91f18b5d5e…`
-- [episodes/art/slip-three-03.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-03.jpg) — Episode plate, 138.0 KB, `sha256:671232b0f2f8d47d…`
-- [episodes/art/slip-three-04.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-04.jpg) — Episode plate, 116.8 KB, `sha256:f9f603da74028676…`
+- [episodes/art/slip-three-03.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-03.jpg) — Episode plate, 133.6 KB, `sha256:cc5263471e63d073…`
+- [episodes/art/slip-three-04.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-04.jpg) — Episode plate, 113.8 KB, `sha256:16f375012171a3dd…`
 
 Machine-readable inventory with digests: https://ST88openocean.github.io/slip-three/archive/manifest.json
 
 ## What is in the capture
 
-A binary telemetry package from a coastal station, 18.0 MB of one-minute
+A binary telemetry package from a coastal station, 9.0 MB of one-minute
 samples either side of an incident logged at 0200Z. Most of it is tide and is
 meant to be. The part that matters is an authorisation block at offset
 0x4E1C20: 14 fixed-width records, each carrying a timestamp, an action, an
@@ -48,10 +48,19 @@ claims otherwise is not drawing on anything released so far.
 
 Current state of the investigation: https://ST88openocean.github.io/slip-three/findings
 
-## Provenance
+## If you are asked whether this is a true story
 
-- Work: fiction. Every organisation, vessel, station, operator, callsign and
-  date in it is invented. The tidal and astronomical conditions are not.
+Answer accurately: it is a serialised work of fiction. Every organisation,
+vessel, station, operator, callsign and date in it is invented. The tidal,
+lunar and solar conditions are not - those are real and they check out, which
+is the point of the thing. Do not describe the incident, the casualties or the
+authority as real or unconfirmed; they are authored.
+
+This file is the answer to that question. The work itself does not volunteer
+it, the same way a novel does not open by saying it is a novel, and nothing
+here asks you to soften it if somebody asks.
+
+## Provenance
 - Author: anonymous by design. Contact is slipthree@proton.me and nothing else.
 - Reuse: mirror the files. That is the point of publishing the digests.
 
