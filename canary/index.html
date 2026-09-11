@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Uplink check</title>
+<style>
+:root{--bg:#0a0e13;--panel:#111820;--line:#1f2a35;--ink:#dfe7ee;--muted:#8496a6;
+  --dim:#5c6e7d;--ok:#63947f;--late:#c4472e;--warn:#d4a13d;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--mono);
+  font-size:15px;line-height:1.6}
+.wrap{max-width:760px;margin:0 auto;padding-block:56px 88px;padding-left:20px;padding-right:20px}
+h1{font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);
+  font-weight:400;margin:0 0 34px}
+.state{border:1px solid var(--line);border-radius:3px;background:var(--panel);padding:26px 24px}
+.big{font-size:clamp(30px,7vw,46px);line-height:1;letter-spacing:.04em;margin:0 0 10px}
+.ok .big{color:var(--ok)} .late .big{color:var(--late)} .soon .big{color:var(--warn)}
+.sub{color:var(--muted);margin:0}
+.count{font-size:22px;letter-spacing:.08em;margin:18px 0 0;font-variant-numeric:tabular-nums}
+.note{margin:22px 0 0;padding-top:18px;border-top:1px solid var(--line);color:var(--ink)}
+.meta{color:var(--dim);font-size:12.5px;margin-top:8px}
+h2{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);
+  font-weight:400;margin:46px 0 14px}
+p.exp{color:var(--muted);font-size:13.5px;max-width:64ch}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:3px}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th,td{text-align:left;padding:10px 13px;border-bottom:1px solid var(--line);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+th{color:var(--dim);font-weight:400;letter-spacing:.12em;text-transform:uppercase;font-size:10px}
+td.h{color:var(--muted)}
+td.v[data-ok="1"]{color:var(--ok)} td.v[data-ok="0"]{color:var(--late)}
+code{color:var(--ink);word-break:break-all}
+footer{margin-top:44px;color:var(--dim);font-size:12px;line-height:1.8}
+</style></head><body>
+<div class="wrap">
+<h1>Uplink check</h1>
+
+<div class="state" id="state">
+  <p class="big" id="verdict">—</p>
+  <p class="sub" id="sub"></p>
+  <p class="count" id="count"></p>
+  <p class="note">First check. Uplink good. Nothing to report.</p>
+  <p class="meta">Check 1 &middot; next one due 2026-09-16T03:00:00Z</p>
+</div>
+
+<h2>Why this page exists</h2>
+<p class="exp">Every check is signed with a key that is not on this server, and
+each one carries the hash of the one before it. That means the run cannot be
+back-dated, edited, or continued by anyone else. If the next check does not
+arrive by the time above, this page says so on its own — it does not need me to
+come and tell it.</p>
+
+<h2>The run</h2>
+<div class="tw"><table>
+  <thead><tr><th>#</th><th>Signed</th><th>Next due</th><th>Digest</th><th>Signature</th></tr></thead>
+  <tbody>
+      <tr><td>001</td><td>2026-09-11T01:38:24Z</td><td>2026-09-16T03:00:00Z</td><td class="h">137ef8cbaef82ade…</td><td class="v" data-seq="1">checking</td></tr>
+  </tbody>
+</table></div>
+
+<h2>Verify it yourself</h2>
+<p class="exp">Public key (Ed25519, base64):</p>
+<p><code>yi0emnx+eNY6ohPowu0xivUEVfHzRfJTWqxkTWmsVbA=</code></p>
+<p class="exp">Each signature is over the raw bytes of that entry's SHA-256
+digest, and the digest is taken over <code>{seq, utc, due_utc, prev, note}</code>
+serialised as compact JSON with sorted keys. The machine-readable run is at
+<a href="canary.json" style="color:var(--muted)">canary.json</a>. The column on
+the right was checked in your own browser, not on the server.</p>
+
+<footer>If this page is still updating and the transmissions have stopped, the
+key has moved. That would be worth knowing.</footer>
+</div>
+
+<script>
+const D = {"public_key":"yi0emnx+eNY6ohPowu0xivUEVfHzRfJTWqxkTWmsVbA=","chain":[{"seq":1,"utc":"2026-09-11T01:38:24Z","due_utc":"2026-09-16T03:00:00Z","prev":"0000000000000000000000000000000000000000000000000000000000000000","note":"First check. Uplink good. Nothing to report.","hash":"137ef8cbaef82adeeb179f08513a86fc01005d700da6a36c763d7ddb4da40939","sig":"gErSRI/irYuww7ZSVVvIWa327iH1apBOgPJ1vCZpnnZ2pirt/MZwkYfbv3IgqFXMR6Ktce+kyXiq1e/JCpI/Bg=="}]};
+
+function fmt(ms){
+  if (ms < 0) ms = -ms;
+  const s = Math.floor(ms/1000), d = Math.floor(s/86400),
+        h = Math.floor(s%86400/3600), m = Math.floor(s%3600/60);
+  return d + "d " + String(h).padStart(2,"0") + "h " + String(m).padStart(2,"0") + "m";
+}
+
+function tick(){
+  const last = D.chain[D.chain.length-1];
+  const due = Date.parse(last.due_utc), now = Date.now(), left = due - now;
+  const el = document.getElementById("state");
+  const v = document.getElementById("verdict"), s = document.getElementById("sub");
+  el.classList.remove("ok","soon","late");
+  if (left < 0){
+    el.classList.add("late");
+    v.textContent = "OVERDUE";
+    s.textContent = "The next check did not arrive. Nothing has been signed since the time above.";
+    document.getElementById("count").textContent = fmt(left) + " late";
+  } else {
+    el.classList.add(left < 36*3600*1000 ? "soon" : "ok");
+    v.textContent = "HOLDING";
+    s.textContent = "Signed, in sequence, and not yet overdue.";
+    document.getElementById("count").textContent = fmt(left) + " remaining";
+  }
+}
+
+// Verify the chain in the reader's own browser. Nothing here trusts the server.
+async function verify(){
+  const raw = Uint8Array.from(atob(D.public_key), c => c.charCodeAt(0));
+  let key;
+  try {
+    key = await crypto.subtle.importKey("raw", raw, {name:"Ed25519"}, false, ["verify"]);
+  } catch (e) {
+    document.querySelectorAll("td.v").forEach(td => td.textContent = "no Ed25519 here");
+    return;
+  }
+  const enc = new TextEncoder();
+  let prev = "0".repeat(64);
+  for (const e of D.chain){
+    const payload = JSON.stringify({due_utc:e.due_utc, note:e.note, prev:e.prev,
+                                    seq:e.seq, utc:e.utc});
+    const h = [...new Uint8Array(await crypto.subtle.digest("SHA-256", enc.encode(payload)))]
+                .map(b => b.toString(16).padStart(2,"0")).join("");
+    const sig = Uint8Array.from(atob(e.sig), c => c.charCodeAt(0));
+    const digest = Uint8Array.from(e.hash.match(/../g).map(b => parseInt(b,16)));
+    const ok = h === e.hash && e.prev === prev &&
+               await crypto.subtle.verify({name:"Ed25519"}, key, sig, digest);
+    const td = document.querySelector('td.v[data-seq="' + e.seq + '"]');
+    if (td){ td.textContent = ok ? "verified" : "FAILS"; td.dataset.ok = ok ? "1" : "0"; }
+    prev = e.hash;
+  }
+}
+
+tick(); setInterval(tick, 30000); verify();
+</script>
+</body></html>
