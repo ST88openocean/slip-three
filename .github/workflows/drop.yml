@@ -2,27 +2,35 @@
 #
 # Episodes are prepared in advance and parked on the `scheduled` branch in a
 # folder named for the date they are due. Every Tuesday at 03:05 UTC this job
-# looks for today's folder, copies it over the site, and commits. If there is
-# nothing for today it does nothing and exits quietly.
+# looks for today's folder, checks it is complete, copies it over the site and
+# commits. If anything is missing it publishes nothing at all.
+#
+# That last part is the whole reason this file has a verification step. A feed
+# that advertises an episode whose audio 404s is worse than a feed that is a
+# week late: the app shows the episode, the play button fails, and the listener
+# concludes the show is broken rather than that it is slow.
 #
 # Two things this deliberately does NOT do:
 #
 #   - It does not sign the canary. The signing key is not here and must never
-#     be. A proof of life that a server can produce on a timer is not a proof
-#     of life, so that step stays human and stays on one machine.
-#   - It does not build anything. The payload is already built and already
-#     verified, so there is no toolchain here to drift, break, or need
-#     updating at three in the morning on a Tuesday.
+#     be. A proof of life a server can produce on a timer is not a proof of
+#     life, so that step stays human and stays on one machine.
+#   - It does not build anything. The payload is pre-built and pre-verified, so
+#     there is no toolchain here to drift or break at three on a Tuesday.
 #
-# Unreleased audio lives on `scheduled`, which is not the Pages branch, so it
-# is not served to anybody until the day it is promoted.
+# Unreleased audio lives on `scheduled`, which is not the Pages branch, so
+# nothing is served to anybody until the day it is promoted.
 
 name: drop
 
 on:
   schedule:
     - cron: '5 3 * * 2'          # Tuesdays, 03:05 UTC
-  workflow_dispatch:              # and a button, for when a date moves
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Promote this date instead of today (YYYY-MM-DD)'
+        required: false
 
 permissions:
   contents: write
@@ -42,35 +50,61 @@ jobs:
       - name: Promote anything due today
         run: |
           set -euo pipefail
-          DATE="${SCHEDULED_DATE:-$(date -u +%Y-%m-%d)}"
+          DATE="${SCHEDULED_DATE:-}"
+          [ -n "$DATE" ] || DATE="$(date -u +%Y-%m-%d)"
           echo "looking for a drop dated $DATE"
 
           if ! git fetch --depth=1 origin scheduled 2>/dev/null; then
-            echo "no scheduled branch - nothing to do"; exit 0
+            echo "::notice::no scheduled branch - nothing to do"; exit 0
           fi
-
           if ! git ls-tree -r --name-only FETCH_HEAD | grep -q "^${DATE}/"; then
-            echo "nothing scheduled for $DATE - nothing to do"; exit 0
+            echo "::notice::nothing scheduled for $DATE - nothing to do"; exit 0
           fi
 
           rm -rf .promote && mkdir .promote
           git archive FETCH_HEAD "$DATE" | tar -x -C .promote
-          cp -a ".promote/${DATE}/." .
+          SRC=".promote/${DATE}"
+
+          # ---- refuse to publish an incomplete drop -------------------------
+          # Take the feed this drop would publish, list every enclosure it
+          # advertises, and confirm each one will exist afterwards - either
+          # because the payload carries it or because it is already live.
+          FEED="$SRC/podcast.xml"
+          [ -f "$FEED" ] || FEED="podcast.xml"
+          MISSING=0
+          while read -r URL; do
+            [ -n "$URL" ] || continue
+            REL="${URL#*/slip-three/}"
+            if [ ! -f "$SRC/$REL" ] && [ ! -f "$REL" ]; then
+              echo "::error::the feed advertises $REL and nothing will serve it"
+              MISSING=$((MISSING+1))
+            fi
+          done < <(grep -o 'enclosure url="[^"]*"' "$FEED" | sed 's/enclosure url="//; s/"$//')
+
+          if [ "$MISSING" -gt 0 ]; then
+            echo "::error::$MISSING file(s) missing - publishing nothing."
+            echo "::error::The site is untouched. Complete the payload on the scheduled branch and re-run."
+            rm -rf .promote
+            exit 1
+          fi
+          echo "payload complete: every advertised enclosure will resolve"
+
+          cp -a "$SRC/." .
           rm -rf .promote
 
           git config user.name  "ST88openocean"
           git config user.email "slipthree@proton.me"
           git add -A
           if git diff --cached --quiet; then
-            echo "payload matched what was already live - nothing to commit"; exit 0
+            echo "::notice::payload matched what was already live - nothing to commit"; exit 0
           fi
           git commit -m "Transmission ${DATE}"
           git push origin HEAD:main
-          echo "promoted $DATE"
+          echo "::notice::promoted $DATE"
         env:
           SCHEDULED_DATE: ${{ github.event.inputs.date }}
 
       - name: Say what is live
+        if: always()
         run: |
-          echo "episodes now in the feed:"
-          grep -c "<item>" podcast.xml || true
+          echo "episodes in the feed: $(grep -c '<item>' podcast.xml || echo 0)"
