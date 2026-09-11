@@ -32,6 +32,12 @@ td.h{color:var(--muted)}
 td.v[data-ok="1"]{color:var(--ok)} td.v[data-ok="0"]{color:var(--late)}
 code{color:var(--ink);word-break:break-all}
 footer{margin-top:44px;color:var(--dim);font-size:12px;line-height:1.8}
+footer a{color:var(--muted)}
+.ask{border:1px solid var(--line);border-left:2px solid var(--ok);border-radius:3px;
+  background:var(--panel);padding:18px 20px;margin:4px 0 8px}
+.cmd{margin:0;color:var(--ink);font-size:13px;line-height:1.9;
+  word-break:break-all;letter-spacing:.01em}
+p.exp a{color:var(--ok)}
 </style></head><body>
 <div class="wrap">
 <h1>Uplink check</h1>
@@ -59,17 +65,48 @@ come and tell it.</p>
   </tbody>
 </table></div>
 
-<h2>Verify it yourself</h2>
+<h2>Check it yourself</h2>
+<p class="exp">The column on the right was checked in your own browser, not on
+my server &mdash; but you should not take that on trust either, because I wrote
+this page. So take the run somewhere I cannot reach and check it there.</p>
+
+<div class="ask">
+  <p class="cmd">curl -O https://st88openocean.github.io/slip-three/canary/check_slip_three.py<br>python3 check_slip_three.py</p>
+  <p class="exp" style="margin-top:14px">One file, standard library only. No
+  installs, no account, nothing of yours leaves your machine. The Ed25519
+  arithmetic is written out in full rather than imported, so you can read every
+  line before you run it. It fetches the run, checks every signature and every
+  link, and tells you whether I am overdue.
+  <a href="check_slip_three.py">Read it first</a>.</p>
+</div>
+
+<h2>And then post what it says</h2>
+<p class="exp">This is the part that matters, and it is the only thing I will
+ever ask of anybody.</p>
+<p class="exp">If you run that and it says VERIFIED, you are holding your own
+record &mdash; on your machine, stamped with your clock, signed with a key that
+is not on this server &mdash; that I was still here on this date. Post it
+somewhere. It costs you nothing and it is not for me.</p>
+<p class="exp">Because one day it will say OVERDUE, and on that day it will
+matter enormously whether the only account of when the transmissions stopped is
+a page I control, or several hundred people who each checked for themselves and
+wrote down what they saw.</p>
+<p class="exp">I would rather it were several hundred people.</p>
+
+<h2>The maths, if you want it</h2>
 <p class="exp">Public key (Ed25519, base64):</p>
 <p><code>yi0emnx+eNY6ohPowu0xivUEVfHzRfJTWqxkTWmsVbA=</code></p>
 <p class="exp">Each signature is over the raw bytes of that entry's SHA-256
-digest, and the digest is taken over <code>{seq, utc, due_utc, prev, note}</code>
-serialised as compact JSON with sorted keys. The machine-readable run is at
-<a href="canary.json" style="color:var(--muted)">canary.json</a>. The column on
-the right was checked in your own browser, not on the server.</p>
+digest. The digest is taken over <code>{seq, utc, due_utc, prev, note}</code>
+serialised as compact JSON with sorted keys. Each entry carries the digest of
+the one before it, so a single edit anywhere invalidates every signature after
+it. The machine-readable run is at
+<a href="canary.json">canary.json</a>.</p>
 
-<footer>If this page is still updating and the transmissions have stopped, the
-key has moved. That would be worth knowing.</footer>
+<footer>Mirror the archive as well, if you have somewhere to put it:
+<a href="../mirrors">the list of copies</a>.<br>
+If this page is still updating and the transmissions have stopped, the key has
+moved. That would be worth knowing.</footer>
 </div>
 
 <script>
