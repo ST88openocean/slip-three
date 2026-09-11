@@ -79,6 +79,14 @@
       "role": "Incident summary sheet"
     },
     {
+      "path": "canary/canary.json",
+      "url": "https://ST88openocean.github.io/slip-three/canary/canary.json",
+      "bytes": 546,
+      "size": "546 B",
+      "sha256": "f75435024cfd149f4e8855e86e92d5f5a611ec12a7bd17a21bb346f9324de245",
+      "role": "File"
+    },
+    {
       "path": "episodes/art/slip-three-01.jpg",
       "url": "https://ST88openocean.github.io/slip-three/episodes/art/slip-three-01.jpg",
       "bytes": 241520,
