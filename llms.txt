@@ -10,18 +10,10 @@ every byte of it is checksummed, so nothing below has to be taken on trust.
 ## What is published
 
 - [episodes/slip-three-01.mp3](https://ST88openocean.github.io/slip-three/episodes/slip-three-01.mp3) — Transmission audio, 5.0 MB, `sha256:d947f98e0a18b790…`
-- [episodes/slip-three-02.mp3](https://ST88openocean.github.io/slip-three/episodes/slip-three-02.mp3) — Transmission audio, 4.8 MB, `sha256:d545dfab8c16f051…`
-- [episodes/slip-three-03.mp3](https://ST88openocean.github.io/slip-three/episodes/slip-three-03.mp3) — Transmission audio, 3.8 MB, `sha256:009dee9d7e7e8e98…`
-- [episodes/slip-three-04.mp3](https://ST88openocean.github.io/slip-three/episodes/slip-three-04.mp3) — Transmission audio, 7.7 MB, `sha256:b1e199ec2702b4f3…`
-- [IMG_0416.jpg](https://ST88openocean.github.io/slip-three/IMG_0416.jpg) — File, 124.2 KB, `sha256:2c588d5bb9f5dd9c…`
 - [MCA-CTL-0314-RAW.slice](https://ST88openocean.github.io/slip-three/MCA-CTL-0314-RAW.slice) — Coastal telemetry capture, station CQ-03, 9.0 MB, `sha256:79838b790d6c49ec…`
-- [MCA-CTL-0315-TIDE.slice](https://ST88openocean.github.io/slip-three/MCA-CTL-0315-TIDE.slice) — Coastal telemetry capture, station CQ-03, 45.8 KB, `sha256:58e2f37ab4ee18f2…`
 - [artwork-document-version.jpg](https://ST88openocean.github.io/slip-three/artwork-document-version.jpg) — Incident summary sheet, 347.8 KB, `sha256:dde834d69f103331…`
 - [canary/canary.json](https://ST88openocean.github.io/slip-three/canary/canary.json) — File, 546 B, `sha256:f75435024cfd149f…`
 - [episodes/art/slip-three-01.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-01.jpg) — Episode plate, 235.9 KB, `sha256:1f05f6066457da1c…`
-- [episodes/art/slip-three-02.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-02.jpg) — Episode plate, 125.5 KB, `sha256:43222b91f18b5d5e…`
-- [episodes/art/slip-three-03.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-03.jpg) — Episode plate, 133.6 KB, `sha256:cc5263471e63d073…`
-- [episodes/art/slip-three-04.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-04.jpg) — Episode plate, 113.8 KB, `sha256:16f375012171a3dd…`
 
 Machine-readable inventory with digests: https://ST88openocean.github.io/slip-three/archive/manifest.json
 
