@@ -3,7 +3,7 @@
     "title": "Slip Three",
     "form": "serialised audio with primary-source material attached",
     "transmissions_planned": 10,
-    "transmissions_published": 4,
+    "transmissions_published": 1,
     "schedule": "weekly, Tuesdays 03:00 UTC",
     "site": "https://ST88openocean.github.io/slip-three/",
     "feed": "https://ST88openocean.github.io/slip-three/podcast.xml",
@@ -23,51 +23,11 @@
       "role": "Transmission audio"
     },
     {
-      "path": "episodes/slip-three-02.mp3",
-      "url": "https://ST88openocean.github.io/slip-three/episodes/slip-three-02.mp3",
-      "bytes": 5077160,
-      "size": "4.8 MB",
-      "sha256": "d545dfab8c16f0514ec9a015c1a5ddc5c1af0415ba389d33c7067f1dd1a9093b",
-      "role": "Transmission audio"
-    },
-    {
-      "path": "episodes/slip-three-03.mp3",
-      "url": "https://ST88openocean.github.io/slip-three/episodes/slip-three-03.mp3",
-      "bytes": 3974028,
-      "size": "3.8 MB",
-      "sha256": "009dee9d7e7e8e98ab701fb0dd1ba87b1125cc27c948930dcf08d1f73ead524d",
-      "role": "Transmission audio"
-    },
-    {
-      "path": "episodes/slip-three-04.mp3",
-      "url": "https://ST88openocean.github.io/slip-three/episodes/slip-three-04.mp3",
-      "bytes": 8029092,
-      "size": "7.7 MB",
-      "sha256": "b1e199ec2702b4f3691e06ef7b0ee23f2fa56849177a536e1f846b55ab6f7c52",
-      "role": "Transmission audio"
-    },
-    {
-      "path": "IMG_0416.jpg",
-      "url": "https://ST88openocean.github.io/slip-three/IMG_0416.jpg",
-      "bytes": 127196,
-      "size": "124.2 KB",
-      "sha256": "2c588d5bb9f5dd9c2c0bf0d106754336a9c8ca3138bd15a37e9c468523a091e7",
-      "role": "File"
-    },
-    {
       "path": "MCA-CTL-0314-RAW.slice",
       "url": "https://ST88openocean.github.io/slip-three/MCA-CTL-0314-RAW.slice",
       "bytes": 9437184,
       "size": "9.0 MB",
       "sha256": "79838b790d6c49ec573c0b53e0b50e8082d952cd01662451a229b42937f6cfa0",
-      "role": "Coastal telemetry capture, station CQ-03"
-    },
-    {
-      "path": "MCA-CTL-0315-TIDE.slice",
-      "url": "https://ST88openocean.github.io/slip-three/MCA-CTL-0315-TIDE.slice",
-      "bytes": 46948,
-      "size": "45.8 KB",
-      "sha256": "58e2f37ab4ee18f2bd2fa5535fbaf4c3dbb1a4341de189e37c065f4817b99f65",
       "role": "Coastal telemetry capture, station CQ-03"
     },
     {
@@ -87,35 +47,19 @@
       "role": "File"
     },
     {
+      "path": "canary/check_slip_three.py",
+      "url": "https://ST88openocean.github.io/slip-three/canary/check_slip_three.py",
+      "bytes": 4525,
+      "size": "4.4 KB",
+      "sha256": "ff6bef9287ac618181b1d6ceb18bd8c7b2159c5040f4273fdb754973cd305d62",
+      "role": "File"
+    },
+    {
       "path": "episodes/art/slip-three-01.jpg",
       "url": "https://ST88openocean.github.io/slip-three/episodes/art/slip-three-01.jpg",
-      "bytes": 241520,
-      "size": "235.9 KB",
-      "sha256": "1f05f6066457da1c7b872e6445359245839cd106df8253bfdb311dc403ada1e9",
-      "role": "Episode plate"
-    },
-    {
-      "path": "episodes/art/slip-three-02.jpg",
-      "url": "https://ST88openocean.github.io/slip-three/episodes/art/slip-three-02.jpg",
-      "bytes": 128470,
-      "size": "125.5 KB",
-      "sha256": "43222b91f18b5d5efd3fb455279e1e32d3b455d68294c997ae2a854c9e8dd01d",
-      "role": "Episode plate"
-    },
-    {
-      "path": "episodes/art/slip-three-03.jpg",
-      "url": "https://ST88openocean.github.io/slip-three/episodes/art/slip-three-03.jpg",
-      "bytes": 136799,
-      "size": "133.6 KB",
-      "sha256": "cc5263471e63d073101952b6c2c924d6a36ca543d13e92ada7b6dc5ac49f51be",
-      "role": "Episode plate"
-    },
-    {
-      "path": "episodes/art/slip-three-04.jpg",
-      "url": "https://ST88openocean.github.io/slip-three/episodes/art/slip-three-04.jpg",
-      "bytes": 116526,
-      "size": "113.8 KB",
-      "sha256": "16f375012171a3dde2dfc6aa0beb7fd19865306a1eeb1116b42971c94727d99a",
+      "bytes": 350143,
+      "size": "341.9 KB",
+      "sha256": "b240a4749deda3e845d59c48cbc23b3926650d52a0ddc3c12f2effa9d77d18d9",
       "role": "Episode plate"
     }
   ]
