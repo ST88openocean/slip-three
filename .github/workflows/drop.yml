@@ -1,0 +1,76 @@
+# The weekly drop, without anybody being at a computer.
+#
+# Episodes are prepared in advance and parked on the `scheduled` branch in a
+# folder named for the date they are due. Every Tuesday at 03:05 UTC this job
+# looks for today's folder, copies it over the site, and commits. If there is
+# nothing for today it does nothing and exits quietly.
+#
+# Two things this deliberately does NOT do:
+#
+#   - It does not sign the canary. The signing key is not here and must never
+#     be. A proof of life that a server can produce on a timer is not a proof
+#     of life, so that step stays human and stays on one machine.
+#   - It does not build anything. The payload is already built and already
+#     verified, so there is no toolchain here to drift, break, or need
+#     updating at three in the morning on a Tuesday.
+#
+# Unreleased audio lives on `scheduled`, which is not the Pages branch, so it
+# is not served to anybody until the day it is promoted.
+
+name: drop
+
+on:
+  schedule:
+    - cron: '5 3 * * 2'          # Tuesdays, 03:05 UTC
+  workflow_dispatch:              # and a button, for when a date moves
+
+permissions:
+  contents: write
+
+concurrency:
+  group: drop
+  cancel-in-progress: false
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Promote anything due today
+        run: |
+          set -euo pipefail
+          DATE="${SCHEDULED_DATE:-$(date -u +%Y-%m-%d)}"
+          echo "looking for a drop dated $DATE"
+
+          if ! git fetch --depth=1 origin scheduled 2>/dev/null; then
+            echo "no scheduled branch - nothing to do"; exit 0
+          fi
+
+          if ! git ls-tree -r --name-only FETCH_HEAD | grep -q "^${DATE}/"; then
+            echo "nothing scheduled for $DATE - nothing to do"; exit 0
+          fi
+
+          rm -rf .promote && mkdir .promote
+          git archive FETCH_HEAD "$DATE" | tar -x -C .promote
+          cp -a ".promote/${DATE}/." .
+          rm -rf .promote
+
+          git config user.name  "ST88openocean"
+          git config user.email "slipthree@proton.me"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "payload matched what was already live - nothing to commit"; exit 0
+          fi
+          git commit -m "Transmission ${DATE}"
+          git push origin HEAD:main
+          echo "promoted $DATE"
+        env:
+          SCHEDULED_DATE: ${{ github.event.inputs.date }}
+
+      - name: Say what is live
+        run: |
+          echo "episodes now in the feed:"
+          grep -c "<item>" podcast.xml || true
