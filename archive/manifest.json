@@ -10,7 +10,7 @@
     "contact": "slipthree@proton.me"
   },
   "counts": {
-    "evidence": 5,
+    "evidence": 6,
     "verification": 3,
     "note": "Evidence is what the case turns on. Verification files are how you check the evidence has not been altered; they are listed but they are not exhibits, and counting them as exhibits would overstate what is here."
   },
@@ -42,8 +42,17 @@
       "url": "https://ST88openocean.github.io/slip-three/MCA-CTL-0314-RAW.slice",
       "bytes": 8847913,
       "size": "8.4 MB",
-      "sha256": "5db440f54c82fce783809a3a6b42e83db2e122e293ff3c5824f7bd274dce8329",
+      "sha256": "3628bbc2d5884aace7f1e431eae3c630ed5daf20765eabf1ad5c3c0879b04eef",
       "role": "Coastal telemetry capture, station CQ-03",
+      "group": "evidence"
+    },
+    {
+      "path": "RJT-3318-PRESERVATION.pdf",
+      "url": "https://ST88openocean.github.io/slip-three/RJT-3318-PRESERVATION.pdf",
+      "bytes": 415567,
+      "size": "405.8 KB",
+      "sha256": "5143a76b07bd12dec1a655646a2a63136ed143793b70082bd1cb8e52e1acf775",
+      "role": "Preliminary report KB/0315/PRELIM, nine pages, scanned",
       "group": "evidence"
     },
     {
