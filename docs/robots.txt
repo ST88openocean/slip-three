@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /log/
+Disallow: /findings/
+Sitemap: https://ST88openocean.github.io/slip-three/sitemap.xml

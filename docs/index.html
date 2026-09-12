@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CQ-03 - telemetry capture, report, recordings</title>
+<meta name="description" content="Telemetry capture, the preliminary report, and recordings. Every file published with its SHA-256.">
+<meta name="robots" content="index,follow">
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 28px 18px 90px;
+    background: #fbfbf9;
+    color: #17171a;
+    font: 16px/1.62 Georgia, "Times New Roman", serif;
+  }
+  main { max-width: 44rem; margin: 0 auto; }
+  p { margin: 0 0 1.1em; max-width: 40rem; }
+  h2 {
+    font: 700 14px/1.3 -apple-system, "Segoe UI", Arial, sans-serif;
+    letter-spacing: .09em; text-transform: uppercase;
+    margin: 2.6em 0 .9em; color: #55554f;
+  }
+  hr { border: 0; border-top: 1px solid #d8d8d2; margin: 2.4em 0 0; }
+  a { color: #1a3a6b; }
+  .f { margin: 0 0 1.7em; }
+  .f b { font-weight: 400; font-family: ui-monospace, "DejaVu Sans Mono", Menlo, Consolas, monospace; }
+  .f .d {
+    font-family: ui-monospace, "DejaVu Sans Mono", Menlo, Consolas, monospace;
+    font-size: 11.5px; line-height: 1.5; color: #5a5a55;
+    word-break: break-all; margin: .25em 0 0;
+  }
+  .f .n { font-size: 14.5px; color: #3d3d3a; margin: .3em 0 0; max-width: 40rem; }
+  audio { width: 100%; max-width: 34rem; margin: .5em 0 .2em; }
+  .rec { margin: 0 0 2em; }
+  .rec .m {
+    font-family: ui-monospace, "DejaVu Sans Mono", Menlo, Consolas, monospace;
+    font-size: 12.5px; color: #5a5a55;
+  }
+  .small { font-size: 14px; color: #55554f; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #151517; color: #ddddd8; }
+    h2 { color: #9a9a92; }
+    hr { border-top-color: #33332f; }
+    a { color: #8fb4e8; }
+    .f .d, .rec .m, .small { color: #94948c; }
+    .f .n { color: #c2c2bb; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<p>Everything I have is here.</p>
+<p>The big file is a telemetry capture out of the control facility at CQ-03, taken the night of the collision. Most of it is tide. There is an authorisation block in it and it does not say what the report says.</p>
+<p>The report is the Authority&#x27;s preliminary. Nine pages, as released. Page six puts the isolation command on my authorisation. Page nine prints the chain.</p>
+<p>Every file has its sha256 next to it. If one does not match, that copy has been got at.</p>
+<p>Take copies.</p>
+
+<hr>
+
+<h2>Files</h2>
+<div class="f"><b><a href="MCA-CTL-0314-RAW.slice" download>MCA-CTL-0314-RAW.slice</a></b> &nbsp;8.4 MB (8,847,913 bytes)<p class="n">Coastal telemetry ingest package, station CQ-03. Full capture is 14.2 GB. The window below went up over about a week, in pieces. Everything either side of it is tide.</p><p class="d">sha256 5db440f54c82fce783809a3a6b42e83db2e122e293ff3c5824f7bd274dce8329</p></div>
+<div class="f"><b><a href="KB-0315-PRELIM.pdf" download>KB-0315-PRELIM.pdf</a></b> &nbsp;1.6 MB (1,626,301 bytes)<p class="n">The Authority&#x27;s preliminary report, nine pages, as released. Page six puts the isolation command on my authorisation. Page seven is an engineer signing off that the chain is intact. Page nine prints the chain. The bars are theirs, not mine - the provision they relied on is cited beside each one, and nothing is withheld from the appendix. Lay page nine next to the capture above and read the two together. That is the whole of what I have to say.</p><p class="d">sha256 bf59be009461599e6960d111983ea10549a576fc910e8e8cf3e6b16fd5b7fda9</p></div>
+
+<h2>Recordings</h2>
+<div class="rec"><span class="m">01 &nbsp; 08 September 2026 &nbsp; 5:22</span><audio controls preload="none" src="episodes/slip-three-01.mp3"></audio><div class="m"><a href="episodes/slip-three-01.mp3" download>download slip-three-01.mp3</a></div></div>
+
+<hr>
+
+<p class="small"><a href="archive/">Every file, with digests</a> &nbsp;·&nbsp; <a href="log/">Station record</a> (needs a passphrase) &nbsp;·&nbsp; <a href="findings/">What has come back</a> &nbsp;·&nbsp; <a href="mirrors/">Mirrors</a></p>
+<p class="small">Mail: <a href="mailto:slipthree@proton.me">slipthree@proton.me</a>. It is the only address I use.</p>
+
+</main>
+</body>
+</html>
