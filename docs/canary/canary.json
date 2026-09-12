@@ -1,0 +1,15 @@
+{
+  "public_key": "yi0emnx+eNY6ohPowu0xivUEVfHzRfJTWqxkTWmsVbA=",
+  "algorithm": "Ed25519",
+  "chain": [
+    {
+      "seq": 1,
+      "utc": "2026-09-11T01:38:24Z",
+      "due_utc": "2026-09-16T03:00:00Z",
+      "prev": "0000000000000000000000000000000000000000000000000000000000000000",
+      "note": "First check. Uplink good. Nothing to report.",
+      "hash": "137ef8cbaef82adeeb179f08513a86fc01005d700da6a36c763d7ddb4da40939",
+      "sig": "gErSRI/irYuww7ZSVVvIWa327iH1apBOgPJ1vCZpnnZ2pirt/MZwkYfbv3IgqFXMR6Ktce+kyXiq1e/JCpI/Bg=="
+    }
+  ]
+}
