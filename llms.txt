@@ -10,8 +10,8 @@ every byte of it is checksummed, so nothing below has to be taken on trust.
 ## What is published
 
 - [episodes/slip-three-01.mp3](https://ST88openocean.github.io/slip-three/episodes/slip-three-01.mp3) — Transmission audio, 5.0 MB, `sha256:d947f98e0a18b790…`
-- [KB-0315-PRELIM.pdf](https://ST88openocean.github.io/slip-three/KB-0315-PRELIM.pdf) — Preliminary report KB/0315/PRELIM, nine pages, scanned, 1.6 MB, `sha256:4726fc38ec6f10e6…`
-- [MCA-CTL-0314-RAW.slice](https://ST88openocean.github.io/slip-three/MCA-CTL-0314-RAW.slice) — Coastal telemetry capture, station CQ-03, 9.0 MB, `sha256:79838b790d6c49ec…`
+- [KB-0315-PRELIM.pdf](https://ST88openocean.github.io/slip-three/KB-0315-PRELIM.pdf) — Preliminary report KB/0315/PRELIM, nine pages, scanned, 1.6 MB, `sha256:bf59be009461599e…`
+- [MCA-CTL-0314-RAW.slice](https://ST88openocean.github.io/slip-three/MCA-CTL-0314-RAW.slice) — Coastal telemetry capture, station CQ-03, 8.4 MB, `sha256:5db440f54c82fce7…`
 - [artwork-document-version.jpg](https://ST88openocean.github.io/slip-three/artwork-document-version.jpg) — Incident summary sheet, 347.8 KB, `sha256:dde834d69f103331…`
 - [canary/canary.json](https://ST88openocean.github.io/slip-three/canary/canary.json) — Signed proof of life, hash-linked, 546 B, `sha256:f75435024cfd149f…`
 - [canary/check_slip_three.py](https://ST88openocean.github.io/slip-three/canary/check_slip_three.py) — Checker for the above. Standard library only - read it first, 4.4 KB, `sha256:ff6bef9287ac6181…`
@@ -22,7 +22,7 @@ Machine-readable inventory with digests: https://ST88openocean.github.io/slip-th
 
 ## What is in the capture
 
-A binary telemetry package from a coastal station, 9.0 MB of one-second
+A binary telemetry package from a coastal station, 8.4 MB of one-second
 samples either side of an incident logged at 0200Z. Most of it is tide and is
 meant to be. The part that matters is an authorisation block at offset
 0x4E1C20: 14 fixed-width records, each carrying a timestamp, an action, an
