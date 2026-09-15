@@ -10,6 +10,15 @@
       "note": "First check. Uplink good. Nothing to report.",
       "hash": "137ef8cbaef82adeeb179f08513a86fc01005d700da6a36c763d7ddb4da40939",
       "sig": "gErSRI/irYuww7ZSVVvIWa327iH1apBOgPJ1vCZpnnZ2pirt/MZwkYfbv3IgqFXMR6Ktce+kyXiq1e/JCpI/Bg=="
+    },
+    {
+      "seq": 2,
+      "utc": "2026-09-14T19:35:11Z",
+      "due_utc": "2026-09-23T03:00:00Z",
+      "prev": "137ef8cbaef82adeeb179f08513a86fc01005d700da6a36c763d7ddb4da40939",
+      "note": "Second check. The window was short all week and this one went up in pieces. Nothing else to report.",
+      "hash": "fd0548980d862a3326c60c8408f7b40de3db72a5dc134599df67af21e6903817",
+      "sig": "dueGCuxmGg/7acRdjFEaxGvBc/ASDT4FAkqDO6REk/pVDHGARsXSIHgdgMzXW/DDYy3f+QIj/TlHcxmmPkbLCA=="
     }
   ]
 }
