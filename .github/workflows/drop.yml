@@ -20,6 +20,23 @@
 #
 # Unreleased audio lives on `scheduled`, which is not the Pages branch, so
 # nothing is served to anybody until the day it is promoted.
+#
+# --- 15 Sep 2026 -------------------------------------------------------------
+# On 15 Sep this job published a stale payload over a drop that had gone out by
+# hand forty minutes earlier, replacing a 28:23 episode with an older 6:59 cut
+# and rolling the feed, the archive and the inventory back four days. The
+# completeness check passed, because it only ever asked "will this file exist",
+# never "is this newer than what is already up".
+#
+# So there are now three refusals, not one. Each of them fails the run and
+# publishes nothing, which is always the right way to fail here.
+#
+#   1. COMPLETE      - every enclosure the feed advertises will resolve.
+#   2. NOT BACKWARDS - the payload's feed is newer than the live one.
+#   3. NOT REWRITING - no episode that is already published gets different
+#                      bytes. Audio is append-only. Replacing a released
+#                      recording is a human decision, and a rare one.
+# -----------------------------------------------------------------------------
 
 name: drop
 
@@ -65,7 +82,9 @@ jobs:
           git archive FETCH_HEAD "$DATE" | tar -x -C .promote
           SRC=".promote/${DATE}"
 
-          # ---- refuse to publish an incomplete drop -------------------------
+          refuse() { echo "::error::$*"; echo "::error::The site is untouched."; rm -rf .promote; exit 1; }
+
+          # ---- 1. refuse to publish an incomplete drop ----------------------
           # Take the feed this drop would publish, list every enclosure it
           # advertises, and confirm each one will exist afterwards - either
           # because the payload carries it or because it is already live.
@@ -81,14 +100,46 @@ jobs:
             fi
           done < <(grep -o 'enclosure url="[^"]*"' "$FEED" | sed 's/enclosure url="//; s/"$//')
 
-          if [ "$MISSING" -gt 0 ]; then
-            echo "::error::$MISSING file(s) missing - publishing nothing."
-            echo "::error::The site is untouched. Complete the payload on the scheduled branch and re-run."
-            rm -rf .promote
-            exit 1
-          fi
-          echo "payload complete: every advertised enclosure will resolve"
+          [ "$MISSING" -eq 0 ] || refuse "$MISSING file(s) missing - publishing nothing. Complete the payload on the scheduled branch and re-run."
+          echo "complete: every advertised enclosure will resolve"
 
+          # ---- 2. refuse to go backwards -----------------------------------
+          # A parked payload can be older than what is live - it happens the
+          # moment anything is published by hand. Compare build dates and stop
+          # rather than undo somebody's work.
+          builddate() { grep -o '<lastBuildDate>[^<]*</lastBuildDate>' "$1" 2>/dev/null \
+                        | head -1 | sed 's|</\?lastBuildDate>||g'; }
+          if [ -f "$SRC/podcast.xml" ] && [ -f podcast.xml ]; then
+            NEW_RAW="$(builddate "$SRC/podcast.xml")"
+            OLD_RAW="$(builddate podcast.xml)"
+            NEW_TS="$(date -u -d "$NEW_RAW" +%s 2>/dev/null || echo '')"
+            OLD_TS="$(date -u -d "$OLD_RAW" +%s 2>/dev/null || echo '')"
+            if [ -z "$NEW_TS" ] || [ -z "$OLD_TS" ]; then
+              refuse "cannot read a build date from one of the feeds - payload '$NEW_RAW', live '$OLD_RAW'. Not guessing."
+            fi
+            if [ "$NEW_TS" -le "$OLD_TS" ]; then
+              refuse "the parked payload is dated $NEW_RAW and what is live is dated $OLD_RAW. This drop is not newer than the site, so promoting it would undo a newer publication. Refresh the payload on the scheduled branch, or delete it if it has already gone out by hand."
+            fi
+            echo "not backwards: payload $NEW_RAW is newer than live $OLD_RAW"
+          fi
+
+          # ---- 3. refuse to rewrite audio that is already out ---------------
+          # Once a recording is published, people have downloaded it and its
+          # digest is printed in the archive. A new episode is a new file; it
+          # is never a different version of an old one.
+          REWRITES=0
+          while read -r REL; do
+            [ -n "$REL" ] || continue
+            if [ -f "$REL" ] && ! cmp -s "$SRC/$REL" "$REL"; then
+              echo "::error::$REL is already published and this payload carries different bytes for it"
+              REWRITES=$((REWRITES+1))
+            fi
+          done < <(cd "$SRC" 2>/dev/null && find episodes -type f -name '*.mp3' 2>/dev/null || true)
+
+          [ "$REWRITES" -eq 0 ] || refuse "$REWRITES published recording(s) would be overwritten. Audio is append-only here. If a released episode genuinely has to be replaced, do it by hand and know why."
+          echo "not rewriting: no published recording changes"
+
+          # ---- promote ------------------------------------------------------
           cp -a "$SRC/." .
           rm -rf .promote
 
