@@ -32,6 +32,8 @@
 # publishes nothing, which is always the right way to fail here.
 #
 #   1. COMPLETE      - every enclosure the feed advertises will resolve.
+#                      (query tags like ?v=2 are stripped before the check -
+#                       they are how you make a cache re-fetch an unchanged file)
 #   2. NOT BACKWARDS - the payload's feed is newer than the live one.
 #   3. NOT REWRITING - no episode that is already published gets different
 #                      bytes. Audio is append-only. Replacing a released
@@ -94,6 +96,7 @@ jobs:
           while read -r URL; do
             [ -n "$URL" ] || continue
             REL="${URL#*/slip-three/}"
+            REL="${REL%%\?*}"          # feeds carry ?v= tags and tracking params
             if [ ! -f "$SRC/$REL" ] && [ ! -f "$REL" ]; then
               echo "::error::the feed advertises $REL and nothing will serve it"
               MISSING=$((MISSING+1))
