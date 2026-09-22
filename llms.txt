@@ -11,15 +11,19 @@ every byte of it is checksummed, so nothing below has to be taken on trust.
 
 - [episodes/slip-three-01.mp3](https://ST88openocean.github.io/slip-three/episodes/slip-three-01.mp3) — Transmission audio, 5.0 MB, `sha256:d947f98e0a18b790…`
 - [episodes/slip-three-02.mp3](https://ST88openocean.github.io/slip-three/episodes/slip-three-02.mp3) — Transmission audio, 19.5 MB, `sha256:a4cf72098ad62858…`
+- [episodes/slip-three-03.mp3](https://ST88openocean.github.io/slip-three/episodes/slip-three-03.mp3) — Transmission audio, 4.0 MB, `sha256:ae8e5573c0925830…`
+- [IMG_0416.jpg](https://ST88openocean.github.io/slip-three/IMG_0416.jpg) — Image, 75.9 KB, `sha256:06c345ff08446ef0…`
 - [KB-0315-PRELIM.pdf](https://ST88openocean.github.io/slip-three/KB-0315-PRELIM.pdf) — Preliminary report KB/0315/PRELIM, nine pages, scanned, 1.6 MB, `sha256:bf59be009461599e…`
 - [MCA-CTL-0314-RAW.partial](https://ST88openocean.github.io/slip-three/MCA-CTL-0314-RAW.partial) — Truncated copy of the capture - the first 4,194,304 bytes and nothing after them, 4.0 MB, `sha256:4ff407ddeacd59e8…`
 - [MCA-CTL-0314-RAW.slice](https://ST88openocean.github.io/slip-three/MCA-CTL-0314-RAW.slice) — Coastal telemetry capture, station CQ-03, 8.4 MB, `sha256:5db440f54c82fce7…`
+- [MCA-CTL-0315-TIDE.slice](https://ST88openocean.github.io/slip-three/MCA-CTL-0315-TIDE.slice) — Coastal telemetry capture, station CQ-03, 45.8 KB, `sha256:58e2f37ab4ee18f2…`
 - [RJT-3318-PRESERVATION.pdf](https://ST88openocean.github.io/slip-three/RJT-3318-PRESERVATION.pdf) — Preliminary report KB/0315/PRELIM, nine pages, scanned, 405.8 KB, `sha256:5143a76b07bd12de…`
 - [artwork-document-version.jpg](https://ST88openocean.github.io/slip-three/artwork-document-version.jpg) — Incident summary sheet, 347.8 KB, `sha256:dde834d69f103331…`
-- [canary/canary.json](https://ST88openocean.github.io/slip-three/canary/canary.json) — Signed proof of life, hash-linked, 1.0 KB, `sha256:3f62a843e7667e7b…`
+- [canary/canary.json](https://ST88openocean.github.io/slip-three/canary/canary.json) — Signed proof of life, hash-linked, 1.4 KB, `sha256:2a23d18b05e98737…`
 - [canary/check_slip_three.py](https://ST88openocean.github.io/slip-three/canary/check_slip_three.py) — Checker for the above. Standard library only - read it first, 4.4 KB, `sha256:ff6bef9287ac6181…`
 - [episodes/art/slip-three-01.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-01.jpg) — Episode plate, 341.9 KB, `sha256:b240a4749deda3e8…`
 - [episodes/art/slip-three-02.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-02.jpg) — Episode plate, 149.4 KB, `sha256:11c860b5ddf59453…`
+- [episodes/art/slip-three-03.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-03.jpg) — Episode plate, 172.9 KB, `sha256:97316077c06d8960…`
 - [provenance.txt](https://ST88openocean.github.io/slip-three/provenance.txt) — What is authored here and what is measured, 2.1 KB, `sha256:640fad364a62749f…`
 
 Machine-readable inventory with digests: https://ST88openocean.github.io/slip-three/archive/manifest.json
