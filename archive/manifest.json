@@ -3,14 +3,14 @@
     "title": "Slip Three",
     "form": "serialised audio with primary-source material attached",
     "transmissions_planned": 10,
-    "transmissions_published": 2,
+    "transmissions_published": 3,
     "schedule": "weekly, Tuesdays 03:00 UTC",
     "site": "https://ST88openocean.github.io/slip-three/",
     "feed": "https://ST88openocean.github.io/slip-three/podcast.xml",
     "contact": "slipthree@proton.me"
   },
   "counts": {
-    "evidence": 9,
+    "evidence": 13,
     "verification": 3,
     "note": "Evidence is what the case turns on. Verification files are how you check the evidence has not been altered; they are listed but they are not exhibits, and counting them as exhibits would overstate what is here."
   },
@@ -35,6 +35,24 @@
       "size": "19.5 MB",
       "sha256": "a4cf72098ad628580e4a99f24b79d420600355fda109af7b52922012565f96ab",
       "role": "Transmission audio",
+      "group": "evidence"
+    },
+    {
+      "path": "episodes/slip-three-03.mp3",
+      "url": "https://ST88openocean.github.io/slip-three/episodes/slip-three-03.mp3",
+      "bytes": 4210369,
+      "size": "4.0 MB",
+      "sha256": "ae8e5573c0925830a0e35d7d3983737d88f3edb44b0df81c8bd4386c688f3b66",
+      "role": "Transmission audio",
+      "group": "evidence"
+    },
+    {
+      "path": "IMG_0416.jpg",
+      "url": "https://ST88openocean.github.io/slip-three/IMG_0416.jpg",
+      "bytes": 77757,
+      "size": "75.9 KB",
+      "sha256": "06c345ff08446ef0b7e738b55016a8e1bd675b9045cfdb536e46339a805d1983",
+      "role": "Image",
       "group": "evidence"
     },
     {
@@ -65,6 +83,15 @@
       "group": "evidence"
     },
     {
+      "path": "MCA-CTL-0315-TIDE.slice",
+      "url": "https://ST88openocean.github.io/slip-three/MCA-CTL-0315-TIDE.slice",
+      "bytes": 46948,
+      "size": "45.8 KB",
+      "sha256": "58e2f37ab4ee18f2bd2fa5535fbaf4c3dbb1a4341de189e37c065f4817b99f65",
+      "role": "Coastal telemetry capture, station CQ-03",
+      "group": "evidence"
+    },
+    {
       "path": "RJT-3318-PRESERVATION.pdf",
       "url": "https://ST88openocean.github.io/slip-three/RJT-3318-PRESERVATION.pdf",
       "bytes": 415567,
@@ -85,9 +112,9 @@
     {
       "path": "canary/canary.json",
       "url": "https://ST88openocean.github.io/slip-three/canary/canary.json",
-      "bytes": 1038,
-      "size": "1.0 KB",
-      "sha256": "3f62a843e7667e7b69dc47428233f9b96ca515e99d815fb8576a101922830e92",
+      "bytes": 1480,
+      "size": "1.4 KB",
+      "sha256": "2a23d18b05e987378c5d9f0e5ca16579ecd51793eb46fe133b2646ef271dd339",
       "role": "Signed proof of life, hash-linked",
       "group": "verification"
     },
@@ -115,6 +142,15 @@
       "bytes": 152935,
       "size": "149.4 KB",
       "sha256": "11c860b5ddf594535f5b616943375ef0f592b4eceeef0d4586bd8bdd23ef291e",
+      "role": "Episode plate",
+      "group": "evidence"
+    },
+    {
+      "path": "episodes/art/slip-three-03.jpg",
+      "url": "https://ST88openocean.github.io/slip-three/episodes/art/slip-three-03.jpg",
+      "bytes": 177099,
+      "size": "172.9 KB",
+      "sha256": "97316077c06d89602a5153d68c4f7a77ff0b0b9a097a1b2dc3dbde51a8cdacb3",
       "role": "Episode plate",
       "group": "evidence"
     },
