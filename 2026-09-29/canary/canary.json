@@ -1,0 +1,42 @@
+{
+  "public_key": "yi0emnx+eNY6ohPowu0xivUEVfHzRfJTWqxkTWmsVbA=",
+  "algorithm": "Ed25519",
+  "chain": [
+    {
+      "seq": 1,
+      "utc": "2026-09-11T01:38:24Z",
+      "due_utc": "2026-09-16T03:00:00Z",
+      "prev": "0000000000000000000000000000000000000000000000000000000000000000",
+      "note": "First check. Uplink good. Nothing to report.",
+      "hash": "137ef8cbaef82adeeb179f08513a86fc01005d700da6a36c763d7ddb4da40939",
+      "sig": "gErSRI/irYuww7ZSVVvIWa327iH1apBOgPJ1vCZpnnZ2pirt/MZwkYfbv3IgqFXMR6Ktce+kyXiq1e/JCpI/Bg=="
+    },
+    {
+      "seq": 2,
+      "utc": "2026-09-14T19:35:11Z",
+      "due_utc": "2026-09-23T03:00:00Z",
+      "prev": "137ef8cbaef82adeeb179f08513a86fc01005d700da6a36c763d7ddb4da40939",
+      "note": "Second check. The window was short all week and this one went up in pieces. Nothing else to report.",
+      "hash": "fd0548980d862a3326c60c8408f7b40de3db72a5dc134599df67af21e6903817",
+      "sig": "dueGCuxmGg/7acRdjFEaxGvBc/ASDT4FAkqDO6REk/pVDHGARsXSIHgdgMzXW/DDYy3f+QIj/TlHcxmmPkbLCA=="
+    },
+    {
+      "seq": 3,
+      "utc": "2026-09-21T19:34:01Z",
+      "due_utc": "2026-09-30T03:00:00Z",
+      "prev": "fd0548980d862a3326c60c8408f7b40de3db72a5dc134599df67af21e6903817",
+      "note": "Third check. Uplink good. Nothing else to report.",
+      "hash": "04728af92294dd9d55ce09fad9ec5c4fff7789770d5bc59deeb357a31676353b",
+      "sig": "d5Lhbv+pQDgUM1ZZqVB3MCj8j7B5tdpvx7MStyCCaJ3ndudcgg72uoLPnRrb+ELtQL9WpwrqjhVuSBs8eKzQBA=="
+    },
+    {
+      "seq": 4,
+      "utc": "2026-09-24T19:26:56Z",
+      "due_utc": "2026-10-07T03:00:00Z",
+      "prev": "04728af92294dd9d55ce09fad9ec5c4fff7789770d5bc59deeb357a31676353b",
+      "note": "Fourth check. Signed early and the window is wider than usual, because I am going to be off the air for a few days. Nothing else to report.",
+      "hash": "1f2b82b3897e73b3aedfd77f7068278dace996a9d1ac8d6cfac07987e7171fe3",
+      "sig": "DGn2xTaT3UeE4xj01LPtPe/AYjklFIKWZf3ra8bzyKgcGtcHSNlyk/+TT+2jJGgZPHe9fpVQfGhHr/FpQbJ4Bw=="
+    }
+  ]
+}
