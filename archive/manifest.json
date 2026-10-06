@@ -3,14 +3,14 @@
     "title": "Slip Three",
     "form": "serialised audio with primary-source material attached",
     "transmissions_planned": 10,
-    "transmissions_published": 4,
+    "transmissions_published": 5,
     "schedule": "weekly, Tuesdays 03:00 UTC",
     "site": "https://ST88openocean.github.io/slip-three/",
     "feed": "https://ST88openocean.github.io/slip-three/podcast.xml",
     "contact": "slipthree@proton.me"
   },
   "counts": {
-    "evidence": 15,
+    "evidence": 19,
     "verification": 3,
     "note": "Evidence is what the case turns on. Verification files are how you check the evidence has not been altered; they are listed but they are not exhibits, and counting them as exhibits would overstate what is here."
   },
@@ -56,11 +56,29 @@
       "group": "evidence"
     },
     {
+      "path": "episodes/slip-three-05.mp3",
+      "url": "https://ST88openocean.github.io/slip-three/episodes/slip-three-05.mp3",
+      "bytes": 4455127,
+      "size": "4.2 MB",
+      "sha256": "5a391ea170699e653e896a5870bdd801408c99901189bbfcf87aa2be4194aae9",
+      "role": "Transmission audio",
+      "group": "evidence"
+    },
+    {
       "path": "IMG_0416.jpg",
       "url": "https://ST88openocean.github.io/slip-three/IMG_0416.jpg",
       "bytes": 77757,
       "size": "75.9 KB",
       "sha256": "06c345ff08446ef0b7e738b55016a8e1bd675b9045cfdb536e46339a805d1983",
+      "role": "Image",
+      "group": "evidence"
+    },
+    {
+      "path": "IMG_0631.jpg",
+      "url": "https://ST88openocean.github.io/slip-three/IMG_0631.jpg",
+      "bytes": 84287,
+      "size": "82.3 KB",
+      "sha256": "4cb69f228ffc357ad1da6556441e1958e256b60c7c79d5217521842f71e7a37a",
       "role": "Image",
       "group": "evidence"
     },
@@ -106,7 +124,16 @@
       "bytes": 415567,
       "size": "405.8 KB",
       "sha256": "5143a76b07bd12dec1a655646a2a63136ed143793b70082bd1cb8e52e1acf775",
-      "role": "Preliminary report KB/0315/PRELIM, nine pages, scanned",
+      "role": "Preservation letter, 29 March 2018. Fourteen days to acknowledge; never acknowledged",
+      "group": "evidence"
+    },
+    {
+      "path": "RJT-3318-STORAGE.pdf",
+      "url": "https://ST88openocean.github.io/slip-three/RJT-3318-STORAGE.pdf",
+      "bytes": 171939,
+      "size": "167.9 KB",
+      "sha256": "10780e016617cf6ce456804d86b262b48b029b769d8cd12f0c3877d258ff2112",
+      "role": "Closure and storage letter, 6 August 2021. The only reply",
       "group": "evidence"
     },
     {
@@ -121,9 +148,9 @@
     {
       "path": "canary/canary.json",
       "url": "https://ST88openocean.github.io/slip-three/canary/canary.json",
-      "bytes": 2012,
-      "size": "2.0 KB",
-      "sha256": "5c4f1fa919a661400ed52f3bf2b5d1bfad640526ab18d003e9118b5b078a9a6b",
+      "bytes": 2492,
+      "size": "2.4 KB",
+      "sha256": "fb58a3df79d8afe6a122c42bbcb69e2d6342b26d07e3754e92aad148561edde5",
       "role": "Signed proof of life, hash-linked",
       "group": "verification"
     },
@@ -169,6 +196,15 @@
       "bytes": 228071,
       "size": "222.7 KB",
       "sha256": "89f38239ca117e20a43a30fb245dee22af51fdf017e80cfdbd2ea58a7c6e23cf",
+      "role": "Episode plate",
+      "group": "evidence"
+    },
+    {
+      "path": "episodes/art/slip-three-05.jpg",
+      "url": "https://ST88openocean.github.io/slip-three/episodes/art/slip-three-05.jpg",
+      "bytes": 197375,
+      "size": "192.7 KB",
+      "sha256": "2d7bd600dd657e24f1aed22387b2da9eafde4168b65352fa066976aa0049c0db",
       "role": "Episode plate",
       "group": "evidence"
     },
