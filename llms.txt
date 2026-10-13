@@ -14,6 +14,7 @@ every byte of it is checksummed, so nothing below has to be taken on trust.
 - [episodes/slip-three-03.mp3](https://ST88openocean.github.io/slip-three/episodes/slip-three-03.mp3) — Transmission audio, 4.0 MB, `sha256:ae8e5573c0925830…`
 - [episodes/slip-three-04.mp3](https://ST88openocean.github.io/slip-three/episodes/slip-three-04.mp3) — Transmission audio, 6.0 MB, `sha256:794bd3c683a52cc9…`
 - [episodes/slip-three-05.mp3](https://ST88openocean.github.io/slip-three/episodes/slip-three-05.mp3) — Transmission audio, 4.2 MB, `sha256:5a391ea170699e65…`
+- [episodes/slip-three-06.mp3](https://ST88openocean.github.io/slip-three/episodes/slip-three-06.mp3) — Transmission audio, 7.7 MB, `sha256:fc66d83befe8d0b6…`
 - [IMG_0416.jpg](https://ST88openocean.github.io/slip-three/IMG_0416.jpg) — Image, 75.9 KB, `sha256:06c345ff08446ef0…`
 - [IMG_0631.jpg](https://ST88openocean.github.io/slip-three/IMG_0631.jpg) — Image, 82.3 KB, `sha256:4cb69f228ffc357a…`
 - [KB-0315-PRELIM.pdf](https://ST88openocean.github.io/slip-three/KB-0315-PRELIM.pdf) — Preliminary report KB/0315/PRELIM, nine pages, scanned, 1.6 MB, `sha256:bf59be009461599e…`
@@ -21,15 +22,18 @@ every byte of it is checksummed, so nothing below has to be taken on trust.
 - [MCA-CTL-0314-RAW.slice](https://ST88openocean.github.io/slip-three/MCA-CTL-0314-RAW.slice) — Coastal telemetry capture, station CQ-03, 8.4 MB, `sha256:5db440f54c82fce7…`
 - [MCA-CTL-0315-TIDE.slice](https://ST88openocean.github.io/slip-three/MCA-CTL-0315-TIDE.slice) — Coastal telemetry capture, station CQ-03, 45.8 KB, `sha256:58e2f37ab4ee18f2…`
 - [RJT-3318-PRESERVATION.pdf](https://ST88openocean.github.io/slip-three/RJT-3318-PRESERVATION.pdf) — Preservation letter, 29 March 2018. Fourteen days to acknowledge; never acknowledged, 405.8 KB, `sha256:5143a76b07bd12de…`
+- [RJT-3318-SLIP.jpg](https://ST88openocean.github.io/slip-three/RJT-3318-SLIP.jpg) — Shelf movement slip for the box, photographed and sent by someone who says she worked at the storage company. I don't know where it came from, 463.1 KB, `sha256:6313279f480f2944…`
 - [RJT-3318-STORAGE.pdf](https://ST88openocean.github.io/slip-three/RJT-3318-STORAGE.pdf) — Closure and storage letter, 6 August 2021. The only reply, 167.9 KB, `sha256:10780e016617cf6c…`
+- [WRITTEN-IN-06.txt](https://ST88openocean.github.io/slip-three/WRITTEN-IN-06.txt) — Written in by someone who says he worked shifts there the year before. Published as received. I don't know who sent it, 0.6 KB, `sha256:59c4114b1c43ac12…`
 - [artwork-document-version.jpg](https://ST88openocean.github.io/slip-three/artwork-document-version.jpg) — Incident summary sheet, 347.8 KB, `sha256:dde834d69f103331…`
-- [canary/canary.json](https://ST88openocean.github.io/slip-three/canary/canary.json) — Signed proof of life, hash-linked, 2.4 KB, `sha256:fb58a3df79d8afe6…`
+- [canary/canary.json](https://ST88openocean.github.io/slip-three/canary/canary.json) — Signed proof of life, hash-linked, 2.9 KB, `sha256:3954abbebe2231fc…`
 - [canary/check_slip_three.py](https://ST88openocean.github.io/slip-three/canary/check_slip_three.py) — Checker for the above. Standard library only - read it first, 4.4 KB, `sha256:ff6bef9287ac6181…`
 - [episodes/art/slip-three-01.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-01.jpg) — Episode plate, 341.9 KB, `sha256:b240a4749deda3e8…`
 - [episodes/art/slip-three-02.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-02.jpg) — Episode plate, 149.4 KB, `sha256:11c860b5ddf59453…`
 - [episodes/art/slip-three-03.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-03.jpg) — Episode plate, 172.9 KB, `sha256:97316077c06d8960…`
 - [episodes/art/slip-three-04.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-04.jpg) — Episode plate, 222.7 KB, `sha256:89f38239ca117e20…`
 - [episodes/art/slip-three-05.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-05.jpg) — Episode plate, 192.7 KB, `sha256:2d7bd600dd657e24…`
+- [episodes/art/slip-three-06.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-06.jpg) — Episode plate, 472.9 KB, `sha256:6db08b74bb5c971d…`
 - [provenance.txt](https://ST88openocean.github.io/slip-three/provenance.txt) — What is authored here and what is measured, 2.1 KB, `sha256:640fad364a62749f…`
 
 Machine-readable inventory with digests: https://ST88openocean.github.io/slip-three/archive/manifest.json
