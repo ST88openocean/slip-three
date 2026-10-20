@@ -3,14 +3,14 @@
     "title": "Slip Three",
     "form": "serialised audio with primary-source material attached",
     "transmissions_planned": 10,
-    "transmissions_published": 6,
+    "transmissions_published": 7,
     "schedule": "weekly, Tuesdays 03:00 UTC",
     "site": "https://ST88openocean.github.io/slip-three/",
     "feed": "https://ST88openocean.github.io/slip-three/podcast.xml",
     "contact": "slipthree@proton.me"
   },
   "counts": {
-    "evidence": 23,
+    "evidence": 27,
     "verification": 3,
     "note": "Evidence is what the case turns on. Verification files are how you check the evidence has not been altered; they are listed but they are not exhibits, and counting them as exhibits would overstate what is here."
   },
@@ -70,6 +70,15 @@
       "bytes": 8085896,
       "size": "7.7 MB",
       "sha256": "fc66d83befe8d0b66acdb077b59922ad2016fef1ddd2dc938cadf34e51d0a9c8",
+      "role": "Transmission audio",
+      "group": "evidence"
+    },
+    {
+      "path": "episodes/slip-three-07.mp3",
+      "url": "https://ST88openocean.github.io/slip-three/episodes/slip-three-07.mp3",
+      "bytes": 7294228,
+      "size": "7.0 MB",
+      "sha256": "fb96117fa85f636567c887ca89e35752fa84e491a046a8c7516099aa1f8b9c23",
       "role": "Transmission audio",
       "group": "evidence"
     },
@@ -164,6 +173,24 @@
       "group": "evidence"
     },
     {
+      "path": "LETTER-UNSENT.txt",
+      "url": "https://ST88openocean.github.io/slip-three/LETTER-UNSENT.txt",
+      "bytes": 2000,
+      "size": "2.0 KB",
+      "sha256": "6b5c542e535bc028a328726954a5ba24e153ec170d363d6901927d19a1e1abd8",
+      "role": "The letter to the four families, written year three and never posted. Typed from the carried copy, names blanked, nothing else changed. Read aloud in 07",
+      "group": "evidence"
+    },
+    {
+      "path": "LETTER-07.txt",
+      "url": "https://ST88openocean.github.io/slip-three/LETTER-07.txt",
+      "bytes": 740,
+      "size": "0.7 KB",
+      "sha256": "38515a05b088b481bc871dae463c5d4f6941ce5d84f5dda80e6e9fd22862d5a9",
+      "role": "The letter that will go, written 13 October 2026. Published first so it cannot be changed before it is delivered",
+      "group": "evidence"
+    },
+    {
       "path": "artwork-document-version.jpg",
       "url": "https://ST88openocean.github.io/slip-three/artwork-document-version.jpg",
       "bytes": 356140,
@@ -175,9 +202,9 @@
     {
       "path": "canary/canary.json",
       "url": "https://ST88openocean.github.io/slip-three/canary/canary.json",
-      "bytes": 2976,
-      "size": "2.9 KB",
-      "sha256": "3954abbebe2231fc68aaee1a51e81a6cd527caf94037b7169cfc1f3139e391e2",
+      "bytes": 3475,
+      "size": "3.4 KB",
+      "sha256": "70cb8b11d1cd7e9cb7e88ac4153b17812db75c83881b7889cd6c3010fcd6f806",
       "role": "Signed proof of life, hash-linked",
       "group": "verification"
     },
@@ -241,6 +268,15 @@
       "bytes": 484287,
       "size": "472.9 KB",
       "sha256": "6db08b74bb5c971d4c1019a49b67c699ca1c8f38bec177d37a9a744d957624f5",
+      "role": "Episode plate",
+      "group": "evidence"
+    },
+    {
+      "path": "episodes/art/slip-three-07.jpg",
+      "url": "https://ST88openocean.github.io/slip-three/episodes/art/slip-three-07.jpg",
+      "bytes": 521520,
+      "size": "509.3 KB",
+      "sha256": "933fde8743b34d0cd71370eb10e72c6771d6c3c2e5ff7d14be72fe2c8c980111",
       "role": "Episode plate",
       "group": "evidence"
     },
