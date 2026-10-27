@@ -3,14 +3,14 @@
     "title": "Slip Three",
     "form": "serialised audio with primary-source material attached",
     "transmissions_planned": 10,
-    "transmissions_published": 7,
+    "transmissions_published": 8,
     "schedule": "weekly, Tuesdays 03:00 UTC",
     "site": "https://ST88openocean.github.io/slip-three/",
     "feed": "https://ST88openocean.github.io/slip-three/podcast.xml",
     "contact": "slipthree@proton.me"
   },
   "counts": {
-    "evidence": 27,
+    "evidence": 30,
     "verification": 3,
     "note": "Evidence is what the case turns on. Verification files are how you check the evidence has not been altered; they are listed but they are not exhibits, and counting them as exhibits would overstate what is here."
   },
@@ -79,6 +79,15 @@
       "bytes": 7294228,
       "size": "7.0 MB",
       "sha256": "fb96117fa85f636567c887ca89e35752fa84e491a046a8c7516099aa1f8b9c23",
+      "role": "Transmission audio",
+      "group": "evidence"
+    },
+    {
+      "path": "episodes/slip-three-08.mp3",
+      "url": "https://ST88openocean.github.io/slip-three/episodes/slip-three-08.mp3",
+      "bytes": 4204419,
+      "size": "4.0 MB",
+      "sha256": "0cb04f3c940f825287d2f13d0b780f2d85674f3c368b34d420aeea6040572f75",
       "role": "Transmission audio",
       "group": "evidence"
     },
@@ -191,6 +200,15 @@
       "group": "evidence"
     },
     {
+      "path": "LIST-08.txt",
+      "url": "https://ST88openocean.github.io/slip-three/LIST-08.txt",
+      "bytes": 1200,
+      "size": "1.2 KB",
+      "sha256": "91a2ece2e7b04f4b0e91296281ac90ca1e60991084c5a342e8e30819acaf7c10",
+      "role": "Page 41 of the other book: what a sensible man would have done in March 2018, and I didn't. Ten lines. Read aloud in 08",
+      "group": "evidence"
+    },
+    {
       "path": "artwork-document-version.jpg",
       "url": "https://ST88openocean.github.io/slip-three/artwork-document-version.jpg",
       "bytes": 356140,
@@ -202,9 +220,9 @@
     {
       "path": "canary/canary.json",
       "url": "https://ST88openocean.github.io/slip-three/canary/canary.json",
-      "bytes": 3475,
-      "size": "3.4 KB",
-      "sha256": "70cb8b11d1cd7e9cb7e88ac4153b17812db75c83881b7889cd6c3010fcd6f806",
+      "bytes": 3958,
+      "size": "3.9 KB",
+      "sha256": "bff8290fdcdb5ee54626774591fe8e9c8a3e7de50b0694329e02abf1eecd3a10",
       "role": "Signed proof of life, hash-linked",
       "group": "verification"
     },
@@ -277,6 +295,15 @@
       "bytes": 521520,
       "size": "509.3 KB",
       "sha256": "933fde8743b34d0cd71370eb10e72c6771d6c3c2e5ff7d14be72fe2c8c980111",
+      "role": "Episode plate",
+      "group": "evidence"
+    },
+    {
+      "path": "episodes/art/slip-three-08.jpg",
+      "url": "https://ST88openocean.github.io/slip-three/episodes/art/slip-three-08.jpg",
+      "bytes": 459257,
+      "size": "448.5 KB",
+      "sha256": "0c14b39cf71db391e8f93203afadb2111c5a0a04d94033e002a8db55c2d576b7",
       "role": "Episode plate",
       "group": "evidence"
     },

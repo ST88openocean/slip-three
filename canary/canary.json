@@ -64,6 +64,15 @@
       "note": "Seventh check. Both letters are up, the one that never went and the one that will. Nothing else to report.",
       "hash": "d1da28ac6022d1d0274f8c656243ae2d17c19a648d54bc724ae55ec48d2e3315",
       "sig": "GNusZdtzzQ5Krs19TFruZ2lOlc7kSx8ml4JoixlT4gR97+WvcLw2HwMO11PJNILfRpIwEeUxyeg2rxuGreAtCA=="
+    },
+    {
+      "seq": 8,
+      "utc": "2026-10-25T19:51:54Z",
+      "due_utc": "2026-11-04T03:00:00Z",
+      "prev": "d1da28ac6022d1d0274f8c656243ae2d17c19a648d54bc724ae55ec48d2e3315",
+      "note": "Done reading it out. The list is up, ten lines, and it stays open. Nothing else to report.",
+      "hash": "58db5ca8be5ed0e08bb174314edea9f7e95840001f65c3b5e5a73529d3a74489",
+      "sig": "pIaJIQWZUMi5mqQn/bnFmnevM9Z+EFZ8l5hGh4NpwG2Uww+MC03sa2z6FuREJyeK+5Bd3NMgRxlB6RM1bbsBBg=="
     }
   ]
 }
