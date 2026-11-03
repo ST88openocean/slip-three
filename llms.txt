@@ -17,6 +17,7 @@ every byte of it is checksummed, so nothing below has to be taken on trust.
 - [episodes/slip-three-06.mp3](https://ST88openocean.github.io/slip-three/episodes/slip-three-06.mp3) — Transmission audio, 7.7 MB, `sha256:fc66d83befe8d0b6…`
 - [episodes/slip-three-07.mp3](https://ST88openocean.github.io/slip-three/episodes/slip-three-07.mp3) — Transmission audio, 7.0 MB, `sha256:fb96117fa85f6365…`
 - [episodes/slip-three-08.mp3](https://ST88openocean.github.io/slip-three/episodes/slip-three-08.mp3) — Transmission audio, 4.0 MB, `sha256:0cb04f3c940f8252…`
+- [episodes/slip-three-09.mp3](https://ST88openocean.github.io/slip-three/episodes/slip-three-09.mp3) — Transmission audio, 6.9 MB, `sha256:c46a32b726fb7e29…`
 - [IMG_0416.jpg](https://ST88openocean.github.io/slip-three/IMG_0416.jpg) — Image, 75.9 KB, `sha256:06c345ff08446ef0…`
 - [IMG_0631.jpg](https://ST88openocean.github.io/slip-three/IMG_0631.jpg) — Image, 82.3 KB, `sha256:4cb69f228ffc357a…`
 - [KB-0315-PRELIM.pdf](https://ST88openocean.github.io/slip-three/KB-0315-PRELIM.pdf) — Preliminary report KB/0315/PRELIM, nine pages, scanned, 1.6 MB, `sha256:bf59be009461599e…`
@@ -26,12 +27,15 @@ every byte of it is checksummed, so nothing below has to be taken on trust.
 - [RJT-3318-PRESERVATION.pdf](https://ST88openocean.github.io/slip-three/RJT-3318-PRESERVATION.pdf) — Preservation letter, 29 March 2018. Fourteen days to acknowledge; never acknowledged, 405.8 KB, `sha256:5143a76b07bd12de…`
 - [RJT-3318-SLIP.jpg](https://ST88openocean.github.io/slip-three/RJT-3318-SLIP.jpg) — Shelf movement slip for the box, photographed and sent by someone who says she worked at the storage company. I don't know where it came from, 463.1 KB, `sha256:6313279f480f2944…`
 - [RJT-3318-STORAGE.pdf](https://ST88openocean.github.io/slip-three/RJT-3318-STORAGE.pdf) — Closure and storage letter, 6 August 2021. The only reply, 167.9 KB, `sha256:10780e016617cf6c…`
+- [RJT-3318-INDEX.pdf](https://ST88openocean.github.io/slip-three/RJT-3318-INDEX.pdf) — The file index the firm enclosed with its 2021 closure letter. Item 3: one USB drive, sealed, signed across the seal, received 21 March 2018, not opened, not copied, 211.6 KB, `sha256:80cf61e6401b55a1…`
 - [WRITTEN-IN-06.txt](https://ST88openocean.github.io/slip-three/WRITTEN-IN-06.txt) — Written in by someone who says he worked shifts there the year before. Published as received. I don't know who sent it, 0.6 KB, `sha256:59c4114b1c43ac12…`
 - [LETTER-UNSENT.txt](https://ST88openocean.github.io/slip-three/LETTER-UNSENT.txt) — The letter to the four families, written year three and never posted. Typed from the carried copy, names blanked, nothing else changed. Read aloud in 07, 2.0 KB, `sha256:6b5c542e535bc028…`
 - [LETTER-07.txt](https://ST88openocean.github.io/slip-three/LETTER-07.txt) — The letter that will go, written 13 October 2026. Published first so it cannot be changed before it is delivered, 0.7 KB, `sha256:38515a05b088b481…`
 - [LIST-08.txt](https://ST88openocean.github.io/slip-three/LIST-08.txt) — Page 41 of the other book: what a sensible man would have done in March 2018, and I didn't. Ten lines. Read aloud in 08, 1.2 KB, `sha256:91a2ece2e7b04f4b…`
+- [VARGA-09.txt](https://ST88openocean.github.io/slip-three/VARGA-09.txt) — The reply from the man who signed page seven of the review. Three lines. Address removed, 0.5 KB, `sha256:b46bc2f61784675f…`
+- [EVERYTHING-09.zip](https://ST88openocean.github.io/slip-three/EVERYTHING-09.zip) — Everything. Every document released so far plus the two new ones, in one bundle, with a SHA256SUMS list inside. Nothing held back for the tenth, 11.6 MB, `sha256:23ce6238f49c59c7…`
 - [artwork-document-version.jpg](https://ST88openocean.github.io/slip-three/artwork-document-version.jpg) — Incident summary sheet, 347.8 KB, `sha256:dde834d69f103331…`
-- [canary/canary.json](https://ST88openocean.github.io/slip-three/canary/canary.json) — Signed proof of life, hash-linked, 3.9 KB, `sha256:bff8290fdcdb5ee5…`
+- [canary/canary.json](https://ST88openocean.github.io/slip-three/canary/canary.json) — Signed proof of life, hash-linked, 4.3 KB, `sha256:5548d86925fee8b7…`
 - [canary/check_slip_three.py](https://ST88openocean.github.io/slip-three/canary/check_slip_three.py) — Checker for the above. Standard library only - read it first, 4.4 KB, `sha256:ff6bef9287ac6181…`
 - [episodes/art/slip-three-01.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-01.jpg) — Episode plate, 341.9 KB, `sha256:b240a4749deda3e8…`
 - [episodes/art/slip-three-02.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-02.jpg) — Episode plate, 149.4 KB, `sha256:11c860b5ddf59453…`
@@ -41,6 +45,7 @@ every byte of it is checksummed, so nothing below has to be taken on trust.
 - [episodes/art/slip-three-06.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-06.jpg) — Episode plate, 472.9 KB, `sha256:6db08b74bb5c971d…`
 - [episodes/art/slip-three-07.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-07.jpg) — Episode plate, 509.3 KB, `sha256:933fde8743b34d0c…`
 - [episodes/art/slip-three-08.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-08.jpg) — Episode plate, 448.5 KB, `sha256:0c14b39cf71db391…`
+- [episodes/art/slip-three-09.jpg](https://ST88openocean.github.io/slip-three/episodes/art/slip-three-09.jpg) — Episode plate, 356.5 KB, `sha256:6cc014847444e585…`
 - [provenance.txt](https://ST88openocean.github.io/slip-three/provenance.txt) — What is authored here and what is measured, 2.1 KB, `sha256:640fad364a62749f…`
 
 Machine-readable inventory with digests: https://ST88openocean.github.io/slip-three/archive/manifest.json
